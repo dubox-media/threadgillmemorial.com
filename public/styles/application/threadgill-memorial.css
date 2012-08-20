@@ -1,0 +1,231 @@
+/**********************************************************************************************************************************************************
+ * IMPORTED STYLES
+ *********************************************************************************************************************************************************/
+/* Application styles */
+@import url('index/styles.css');
+
+/* Library styles */
+@import url('../libs/1140/1140.css');
+@import url('../libs/normalize/normalize.css');
+
+
+/* Plugin styles */
+@import url('');
+/**********************************************************************************************************************************************************
+* FONT KITS
+*********************************************************************************************************************************************************/
+
+/**********************************************************************************************************************************************************
+* COLORS
+*********************************************************************************************************************************************************
+    Type:                           #272727
+    Dividers/border:                #efdabf
+    colum articles:                 #b57b10
+*/
+
+/**********************************************************************************************************************************************************
+ * DEFAULTS/NORMALIZATIONS/BODY
+ *********************************************************************************************************************************************************/
+* {
+    margin:0;
+    padding:0;
+}
+
+html {
+    color: #272727;
+    font-size: 62.5%;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url('/images/body_bg.png');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+body img {
+    width: auto;
+}
+
+/*
+ *--------------------------
+ * Links 
+ *--------------------------
+ */
+
+a {
+    color: #272727;
+    font-size: 18px;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+a:hover {
+
+}
+
+a:visited {
+
+}
+
+/**********************************************************************************************************************************************************
+ * HEADER/NAVIGATION
+ *********************************************************************************************************************************************************/
+
+#phone-number img {
+    float: right;
+}
+
+#site-header {
+    background-image: url('/images/nav_bg.png');
+    background-size: 100% 100%;
+    min-height: 98px;
+    /*height: 9%;*/
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#site-nav {
+    /*min-height: 42px;*/
+    height: 100%;
+}
+
+#site-logo img {
+    min-height: 98px;
+    /*height: 100%;*/
+    /*min-width: 97px;*/
+}
+
+#site-header nav {
+    /*min-height: 42px;*/
+    height: 100%;
+    text-align: left;
+    display: table;
+    padding: 25px 0;
+}
+
+#site-header nav ul {
+    display: table-row;
+    height: 100%;
+}
+
+/* TODO: Set media query for a width of 554px */
+#site-header nav ul li {
+    background-image: url('/images/vert.png');
+    background-position: 100% 0;
+    background-size: 2px 45px;
+    background-repeat: repeat-y;
+    display: table-cell;
+    vertical-align: middle;
+    height: 58px;
+    text-align: center;
+    width:14.5%;
+}
+
+#site-header nav ul li:not(:first-child) {
+    
+}
+
+#site-header nav ul li:last-child {
+    background: none;
+}
+
+#site-header nav a {
+    display: inline-block;
+    height:auto;
+    width: 100%;
+    padding:0;
+}
+
+@media screen and (max-width: 767px) {
+    #site-header {
+        min-height: 42px;
+        height: auto;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    #site-nav {
+        min-height: 42px;
+        height: 100%;
+    }
+
+    #site-logo img {
+        margin: 0 auto;
+        min-height: 42px;
+        height: 108px;
+        min-width: 97px;
+        text-align: center;
+    }
+
+    #site-header nav {
+        min-height: 42px;
+        float: none;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        display: table;
+        margin: 0 auto;
+    }
+
+    #site-header nav ul li {
+        display: table-cell;
+        vertical-align: middle;
+        height: 42px;
+        text-align: center;
+        width:14.5%;
+    }
+}
+
+@media screen and (max-width: 586px) {
+
+    #site-header {
+        background-image: url('/images/content_bg.png')
+    }
+
+    #site-header nav {
+        margin: 10px 0;
+    }
+
+    #site-header nav ul li {
+        display: block;
+        background: none;
+        height: 42px;
+        text-align: center;
+        width:100%;
+    }
+}
+
+/**********************************************************************************************************************************************************
+* CONTENT
+**********************************************************************************************************************************************************/
+
+/*
+ *--------------------------
+ *  Main Content wrapper
+ *--------------------------
+ */
+
+#site-content {
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 5px;
+}
+
+/**********************************************************************************************************************************************************
+ * FOOTER
+ *********************************************************************************************************************************************************/
+#site-footer {
+    background-image: url('/images/content_bg.png');
+    background-size: 100% 100%;
+    background-repeat: repeat-x;
+    height:auto;
+}
+/**********************************************************************************************************************************************************
+ 
+ *********************************************************************************************************************************************************/
