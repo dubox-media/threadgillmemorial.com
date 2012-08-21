@@ -53,6 +53,22 @@ body img {
 
 /*
  *--------------------------
+ * Headers
+ *--------------------------
+ */
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 34px;
+    font-size: 3.4rem;
+}
+
+/*
+ *--------------------------
  * Links 
  *--------------------------
  */
@@ -70,6 +86,73 @@ a:hover {
 
 a:visited {
 
+}
+
+a img {
+    outline: none;
+    border: none;
+}
+
+a h2:hover {
+    text-decoration: underline;
+}
+
+/*
+ *--------------------------
+ * Lists 
+ *--------------------------
+ */
+
+ul {
+    padding:0;
+    marign:0;
+    width:100%;
+}
+
+li {
+    list-style-type: none;
+    display: block;
+}
+
+
+/*
+ *--------------------------
+ * Accordions 
+ *--------------------------
+ */
+.accordion {
+    width: 78%;
+    background-image: url('/images/accordion_border.png');
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.accordion header {
+    padding: 0 0 5px 15px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 13px;
+    font-size: 1.3rem;
+}
+
+.closed {
+    background-image: url('/images/accordion_arrow_closed.png');
+    background-position: 2px 2px;
+    background-repeat: no-repeat;
+}
+
+/*
+ *--------------------------
+ * Floats
+ *--------------------------
+ */
+
+.clear-15 {
+    clear: both;
+    min-height: 15px;
+    height: 15px;
 }
 
 /**********************************************************************************************************************************************************
@@ -96,12 +179,9 @@ a:visited {
 
 #site-logo img {
     min-height: 98px;
-    /*height: 100%;*/
-    /*min-width: 97px;*/
 }
 
 #site-header nav {
-    /*min-height: 42px;*/
     height: 100%;
     text-align: left;
     display: table;
@@ -217,6 +297,11 @@ a:visited {
     padding: 10px 5px;
 }
 
+@media screen and (max-width:1155px) {
+    #site-content {
+        padding: 10px 0;
+    }
+}
 /**********************************************************************************************************************************************************
  * FOOTER
  *********************************************************************************************************************************************************/

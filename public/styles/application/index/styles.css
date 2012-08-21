@@ -53,19 +53,19 @@
 }
 
 .column {
-	padding: 20px 10px;
+	padding: 20px 0;
 }
 
-.column header {
-	width: 85%;
-	margin: 0 0 15px 0;
+.column>header {
+	width: 100%;
+	margin: 0 auto 15px auto;
 }
 
-.column header img {
+.column>header img {
     float: left;
 }
 
-.column header h2 {
+.column>header h2 {
 	font-size: 19px;
   font-size: 1.9rem;
   font-weight: lighter;
@@ -74,19 +74,66 @@
   top:30px;
 }
 
-.column header article {
+.column>header article {
 	clear: both;
+	margin:0 auto;
+	text-align: center;
+}
+
+.column>header article p {
 	font-size: 14px;
 	font-size:1.4rem;
 	color:  #b57b10;
 	font-weight: bold;
+	margin:0 auto;
+	text-align: left;
 }
 
-.column article p {
+.column>article p {
 	font-size: 12px;
 	font-size:1.2rem;
 }
 
+.column figure img {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.column .sub-menu {
+	clear: both;
+	background-image: url('/images/accordion_border.png');
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+	text-align: center;
+	margin: 10px auto;
+	width: 100%;
+}
+
+.sub-menu figure {
+	width:auto;
+	float: left;
+	margin:3px  10px 0 0;
+}
+
+.sub-menu article {
+	text-align: left;
+	float: left;
+	width:75%;
+}
+
+.sub-menu article p {
+	text-align: left;
+	margin:0;
+	padding:0;
+}
+
+.sub-menu article h2 {
+	color:#b57b10;
+	font-size: 18px;
+	font-size: 1.8rem;
+	margin:0;
+	padding:0;
+}
 /**********************************************************************************************************************************************************
  
  *********************************************************************************************************************************************************/
