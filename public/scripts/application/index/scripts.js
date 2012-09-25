@@ -6,7 +6,7 @@
  */
 
 /**********************************************************************************************************************************************************
- * GLOBAL VARS/FUNCTIONS																																																																	*
+ * GLOBAL VARS/FUNCTIONS																																																												*
  *********************************************************************************************************************************************************/
 
 /**********************************************************************************************************************************************************
@@ -25,7 +25,7 @@
 	 * Threadgill_Memorial CONSTRUCTOR
 	 * -------------------------------
 	 */
-	var Threadgill_Memorial = function () {
+	var Threadgill_Memorial_Index = function () {
 		var self = this;
 
 		//instantiate object methods
@@ -37,7 +37,7 @@
 	 * Threadgill_Memorial OBJECT METHODS
 	 * ----------------------------------
 	 */
-	Threadgill_Memorial.prototype = {
+	Threadgill_Memorial_Index.prototype = {
 		/**
 		 * ----
 		 * INIT
@@ -59,21 +59,7 @@
 		 * @desc: public object to modularize reptitive code/utilities
 		 */
 		_utils: {
-			accordion: function(elem) {
-				var self = window.TM;
-
-				// If closed:
-				if($(elem).is('.closed')) {
-					$(elem).parent().children('.accordion-content').slideDown(400, function() {
-						$(elem).removeClass('closed').addClass('opened');
-					});
-				} else {
-					$(elem).parent().children('.accordion-content').slideUp(400, function() {
-						$(elem).removeClass('opened').addClass('closed');
-					});
-				}
-
-			}
+			
 		},
 		/**
 		 * ----------
@@ -89,37 +75,6 @@
 			 */
 			$(document).ready(function () {
 
-				$('#slide-show').epicSlide({
-					slides: {
-						slide_1: {
-							image: '/images/slide_1.png',
-							caption: ''
-						},
-						slide_2: {
-							image: '/images/slide_2.png',
-							caption: '',
-							direction: 'bottom'
-						},
-						slide_3: {
-							image: '/images/slide_3.png',
-							caption: ''
-						},
-						slide_4: {
-							image: '/images/slide_4.png',
-							caption: '',
-							direction: 'top'
-						},
-						slide_5: {
-							image: '/images/slide_5.png',
-							direction: 'right',
-							caption: ''
-						},
-						slide_6: {
-							image: '/images/slide_6.png',
-							caption: ''
-						}
-					}
-				});
 			});
 
 			/**
@@ -138,10 +93,15 @@
 		bind_events: function() {
 			var self = this;
 
+			// Accordion
+			$('.accordion>header').live('click', function(e) {
+				console.log(e);
+				window.TM._utils.accordion(this);
+			});
 		}
 	}
-	// Instantiate the local object and push it to the window object
-	window.TM = new Threadgill_Memorial();
+	// Instantiate the local object
+	new Threadgill_Memorial_Index();
 })(window);
 
 

@@ -80,7 +80,9 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		$view->headScript()->appendFile('/scripts/libs/jquery/jquery-1.7.1.js')
 			->headScript()->appendFile('/scripts/libs/modernizr/modernizr.js')
 			->headScript()->appendFile('/scripts/libs/1140/1140.js')
-			->headScript()->appendFile('/scripts/application/threadgill-memorial.js');
+			->headScript()->appendFile('/scripts/application/threadgill-memorial.js')
+			->headScript()->appendFile('/scripts/plugins/epicSlide/epicSlide.js')
+			->headScript()->appendFile('/scripts/application/index/scripts.js');
 	}
 }
 
