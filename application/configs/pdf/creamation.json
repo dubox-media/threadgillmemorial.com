@@ -1,0 +1,90 @@
+"page_1": {
+		"name": {
+			"x": 161,
+			"y": 172
+		},
+		"dob": {
+			"x": 130,
+			"y": 195
+		},
+		"dod": {
+			"x": 324,
+			"y": 195
+		},
+		"ssn": {
+			"x": 439,
+			"y": 195
+		},
+		"container": {
+			"x": 203,
+			"y": 298
+		},
+		"tray": {
+			"x": 298,
+			"y": 298
+		},
+		"container_other": {
+			"x": 369,
+			"y": 299
+		},
+		"creamated_remains_ship_initals": {
+			"x": 50,
+			"y": 577
+		},
+		"creamated_remains_ship_name": {
+			"x": 242,
+			"y": 579
+		},
+		"creamated_remains_ship_address": {
+			"x": 156,
+			"y": 590
+		},
+		"creamated_remains_called_for_by_initals": {
+			"x": 50,
+			"y": 608
+		},
+		"creamated_remains_called_for_by_name": {
+			"x": 249,
+			"y": 609
+		},
+		"signature": {
+			"x": 182,
+			"y": 664
+		},
+		"date": {
+			"x": 380,
+			"y": 664
+		},
+		"time": {
+			"x": 472,
+			"y": 664
+		},
+		"print_name": {
+			"x": 186,
+			"y": 684
+		},
+		"relationship": {
+			"x": 414,
+			"y": 684
+		},
+		"rel_address": {
+			"x": 175,
+			"y": 705
+		},
+		"telephone_nbr": {
+			"x": 437,
+			"y": 705
+		},
+		"witness": {
+			"x": 182,
+			"y": 736
+		},
+		"witness_date": {
+			"x": 388,
+			"y": 736
+		},
+		"witness_time": {
+			"x": 477,
+			"y": 736
+		}
+}
