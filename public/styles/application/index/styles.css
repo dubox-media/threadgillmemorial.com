@@ -37,18 +37,8 @@
 	text-align: center;
 }
 
-#slide-show figure {
-	width:auto;
-	height: auto;
-	border: 4px solid #ffecbf;
-	background-color: white;
-	margin: 0 auto;
-	padding:4px;
-	text-align: center;
-}
-
 #slide-show img {
-	width:100%;
+	width:99%;
 	height: auto;
 	text-align: center;
 	margin: 0 auto;
