@@ -14,22 +14,15 @@ class FormsController extends Zend_Controller_Action
         $this->view->form = $form;
     }
 
-    public function pdfAction()
+    public function submitFormAction()
     {
         if ($this->_request->isPost()) {
+			
+			$form_type = $this->_request->getParam('form_name');
 
-					$config = new Zend_Config_Json(APPLICATION_PATH . '/configs/pdf/creamation.json');
-
-					// exit(print_r($config->name->x));
-
-					$pdf = Zend_Pdf::load('creamation_authorization.pdf');
-					$page = $pdf->pages[0];
-					$font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
-					$page->setFont($font, 42);
-					$page->drawText('HAI', 40, 400);
-					$save = $pdf->save(APPLICATION_PATH . '/../docs/PDF/new.pdf');
-					exit(print_r($save));
-        	//$this->_redirect('/forms/index');
+            $form_values = $_POST;
+            
+            $pdf = new TMS_Pdf_Pdf($form_type, $form_values);
         }
     }
 
