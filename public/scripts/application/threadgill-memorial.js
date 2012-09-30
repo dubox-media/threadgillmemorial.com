@@ -138,6 +138,11 @@
 		bind_events: function() {
 			var self = this;
 
+			// Accordion
+			$('.accordion>header').live('click', function(e) {
+				console.log(e);
+				self._utils.accordion(this);
+			});
 		}
 	}
 	// Instantiate the local object and push it to the window object

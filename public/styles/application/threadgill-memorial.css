@@ -105,7 +105,7 @@ a h2:hover {
 
 ul {
     padding:0;
-    marign:0;
+    margin:0;
     width:100%;
 }
 
@@ -143,6 +143,22 @@ li {
     background-repeat: no-repeat;
 }
 
+.opened {
+    background-image: url('/images/accordion_arrow_opened.png');
+    background-position: 2px 2px;
+    background-repeat: no-repeat;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+}
+
+.accordion-content p {
+    margin:0;
+    text-align: left;
+}
+
 /*
  *--------------------------
  * Floats
@@ -161,6 +177,22 @@ li {
 
 #phone-number img {
     float: right;
+}
+
+#headline {
+    padding: 4px 0 0 0;
+}
+ 
+.sm-icons-list {
+    text-align: right;
+}
+ 
+.sm-icons-list li {
+    display: inline;
+}
+ 
+.sm-icons-list li:not(last-child) {
+    margin-right: 5px;
 }
 
 #site-header {
