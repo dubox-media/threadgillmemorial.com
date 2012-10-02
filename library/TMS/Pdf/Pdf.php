@@ -63,14 +63,20 @@ class TMS_PDF_Pdf
 		$pdf = Zend_Pdf::load(APPLICATION_PATH . '/../docs/PDF/'.$this->_form_type.'.pdf');
 		$page = $pdf->pages[0];
 		$font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
-		$page->setFont($font, 12);
+		$page->setFont($font, 10);
 
 		foreach ($this->_form_objects as $k0 => $v0) {
 			foreach ($config->page_1 as $k1 => $v1) {
 				if($k0 == $k1) {
 					foreach ($v1 as $k2 => $v2) {
 						// Draw text in page
-						$page->drawText($v0, $v1->x, $v1->y);
+						if($v0 !== 0) {
+							if($v0 == 1) {
+								$page->drawText('X', $v1->x, $v1->y);
+							} else {
+								$page->drawText($v0, $v1->x, $v1->y);
+							}
+						}
 						// Set file name
 						if($k0 == 'name') {
 							if(!empty($v0)) {

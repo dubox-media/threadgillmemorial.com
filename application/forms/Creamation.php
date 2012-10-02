@@ -16,7 +16,6 @@ class Form_Creamation extends Zend_Form
 		$form_name->setValue('creamation');
 		$this->addElement($form_name);
 
-
 		// Page 1 name	
 		$name = $this->createElement('text', 'name');
 		$name->setRequired(true)
@@ -34,6 +33,12 @@ class Form_Creamation extends Zend_Form
 		$dob->setLabel('Date of Birth: ')
 				->setRequired(true);
 		$this->addElement($dob);
+
+		// DoD
+		$dod = $this->createElement('text', 'dod');
+		$dod->setLabel('Date of Death: ')
+				->setRequired(true);
+		$this->addElement($dod);
 
 		// SSN
 		$ssn = $this->createElement('text', 'ssn');
@@ -57,7 +62,7 @@ class Form_Creamation extends Zend_Form
 		$this->addElement($container_other);
 
 		// Ship Initials
-		$ship_initials = $this->createElement('text', 'created_remains_ship_initials');
+		$ship_initials = $this->createElement('text', 'creamated_remains_ship_initials');
 		$ship_initials->setLabel('Initial: ');
 		$this->addElement($ship_initials);
 
@@ -72,12 +77,12 @@ class Form_Creamation extends Zend_Form
 		$this->addElement($ship_address);
 
 		// Called for initials
-		$called_for_initials = $this->createElement('text', 'created_remains_called_for_by_initials');
+		$called_for_initials = $this->createElement('text', 'creamated_remains_called_for_by_initials');
 		$called_for_initials->setLabel('Initial: ');
 		$this->addElement($called_for_initials);
 
 		// Called for name
-		$called_for_name = $this->createElement('text', 'created_remains_called_for_by_name');
+		$called_for_name = $this->createElement('text', 'creamated_remains_called_for_by_name');
 		$called_for_name->setLabel('Creamated remains will be called for by: ');
 		$this->addElement($called_for_name);
 
