@@ -22,7 +22,7 @@ class FormsController extends Zend_Controller_Action
 
             $form_values = $_POST;
             
-            $pdf = new TMS_Pdf_Pdf($form_type, $form_values);
+            $pdf = new TMS_Pdf_Pdf($form_type, $form_values, TRUE);
         }
     }
 

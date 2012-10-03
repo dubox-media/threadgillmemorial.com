@@ -22,13 +22,15 @@ class TMS_PDF_Pdf
 	private $_form_type = ''; // Form type
 	private $_form_objects = Array(); // Array of form vars
 	private $_file_name = ''; // Name to include in file 
+	private $_file_path = ''; //Complete path and name of file
+	private $_send_mail = FALSE;
 
 	/**
 	 * TMS_PDF Constructor
 	 *	takes arguments from controller actions, determines
 	 *	required libraries and sends generated pdf's to the mailer.
 	 */
-	function __construct($form_type, $form_objects)
+	function __construct($form_type, $form_objects, $mail)
 	{
 		/*
 			Pseudo block:
@@ -44,6 +46,8 @@ class TMS_PDF_Pdf
 			So the biggest thing is to make sure naming is consistent
 		*/
 
+		// Members
+		$this->_send_mail = $mail;
 		$this->_form_type = $form_type;
 		$this->_form_objects = $form_objects;
 
@@ -90,6 +94,33 @@ class TMS_PDF_Pdf
 			}
 		}
 
-		$save = $pdf->save(APPLICATION_PATH . '/../docs/PDF/'.$this->_file_name . '_' . $this->_form_type  .'_' . date('m_d_y') . '.pdf');
+		// Build full path and file name
+		$this->_file_path = APPLICATION_PATH . '/../docs/PDF/'.$this->_file_name . '_' . $this->_form_type  .'_' . date('m_d_y') . '.pdf';
+		$send_name =  $this->_file_name . '_' . $this->_form_type  .'_' . date('m_d_y');
+		// Save PDF
+		$save = $pdf->save($this->_file_path);
+
+		// If the file exists, try and mail it
+		if(!$this->_send_mail)
+		{
+			if(file_exists($this->_file_path))
+			{
+				return TRUE;
+			} else {
+				return FALSE;
+			}
+		} else {
+			if(file_exists($this->_file_path))
+			{
+				try {
+					$mail = new TMS_MAIL_Mail('Form submission', 'deborah@threadgillmemorial.com', 'creamation', $this->_file_path, $send_name);
+				} catch(Exception $e) {
+					throw new Exception($e);
+				}
+				// $mail = new TMS_M_Mail('Form submission', 'stowell.kt@gmail.com', 'creamation', $this->_file_path);
+			} else {
+				return false;
+			}
+		}
 	}
 }
