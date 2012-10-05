@@ -93,7 +93,7 @@ class TMS_Mail_Mail
 	{
 		//Set up smtp params
 		$config = array(
-			'auth'       =>  'PLAIN',
+			'auth'       =>  'Plain',
 			'username'   =>  'ktstowell@kenstowell.net',
 			'password'   =>  'rhincodon5',
 			'port'       =>  '587'
