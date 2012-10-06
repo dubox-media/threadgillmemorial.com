@@ -31,14 +31,11 @@ class TMS_Mail_Mail
 	public function __construct($subject, $to=NULL, $body, $attachment=NULL, $att_name=NULL)
 	{
 		$this->subject = $subject;
-		$this->to = ($to == NULL)? 'deborah@threadgillmemorial.com' : $to;
+		$this->to = ($to == NULL)? 'stowell.kt@gmail.com' : $to;
 		$this->body = $body;
 		$this->attachment = ($attachment !== NULL) ? file_get_contents($attachment) : $attachment;
 		$this->att_name = $att_name;
 		$this->_mail = new Zend_Mail();
-
-
-		print($att_name);
 
 		$this->build_mail();
 	}
@@ -93,7 +90,7 @@ class TMS_Mail_Mail
 	{
 		//Set up smtp params
 		$config = array(
-			'auth'       =>  'Plain',
+			'auth'       =>  'plain',
 			'username'   =>  'ktstowell@kenstowell.net',
 			'password'   =>  'rhincodon5',
 			'port'       =>  '587'
@@ -103,7 +100,7 @@ class TMS_Mail_Mail
 		$transport = new Zend_Mail_Transport_Smtp('mail.bravehost.com', $config);
 
 		try {
-			$this->_mail->send($transport);
+			//$this->_mail->send($transport);
 		} catch(Exception $e) {
 			throw new Exception("Error Processing Request", 1, $e);
 		}

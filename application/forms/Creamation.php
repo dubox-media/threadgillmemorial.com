@@ -25,6 +25,9 @@ class Form_Creamation extends Zend_Form
 		// Gender
 		$gender = $this->createElement('select','gender');
 		$gender->setLabel('SEX: ')
+					 ->addMultiOption('', '')	
+					 ->addMultiOption('male', 'Male')
+					 ->addMultiOption('female', 'Female')
 					 ->setRequired(true);
 		$this->addElement($gender);
 
