@@ -5,10 +5,16 @@ class FormsController extends Zend_Controller_Action
 
     public function init()
     {
-        /* Initialize action controller here */
+        $this->view->headLink()->appendStylesheet('/styles/application/forms/styles.css');
+        $this->view->headScript()->appendFile('/scripts/application/forms/scripts.js');
     }
 
     public function indexAction()
+    {
+        
+    }
+
+    public function cremationAction()
     {
         $form = new Form_Creamation();
         $this->view->form = $form;
@@ -24,9 +30,32 @@ class FormsController extends Zend_Controller_Action
             
             $pdf = new TMS_Pdf_Pdf($form_type, $form_values, TRUE);
         }
+        
     }
 
+    public function cremationFormAction()
+    {
+        // action body
+    }
+
+    public function embalmingFormAction()
+    {
+        // action body
+    }
+
+    public function registrationFormAction()
+    {
+        // action body
+    }
+
+
 }
+
+
+
+
+
+
 
 
 

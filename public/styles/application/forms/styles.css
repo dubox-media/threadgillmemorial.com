@@ -7,15 +7,64 @@
 * CONTENT
 **********************************************************************************************************************************************************/
 
-/*
+/**
  *--------------------------
  *  Main Content 
  *--------------------------
  */
 #forms-content {
-	background-color: white;
-	border:3px solid #333;
+	/*background-color: white;
+	border:3px solid #333;*/
 }
+
+/**
+ * -------------------
+ * Forms Menu
+ * -------------------
+ */
+
+#forms-menu {
+	text-align: center;
+	margin: 0 auto 0 auto;
+}
+
+#forms-menu-list {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto 0 auto;
+}
+
+.form-item-row {
+	width: auto;
+	display: inline-block;
+	text-align: center;
+	margin: 2% 0 2% auto;
+	float: none;
+}
+
+.form-item {
+	height:150px;
+	width: 260px;
+	margin: 0 15px;
+	display: inline-block;
+	border: 4px solid #ccc;
+	background-color: #333;
+	overflow: hidden;
+	box-shadow: 5px 5px 3px #333;
+}
+
+.form-item:hover {
+	border: 4px solid #E8CB95;
+}
+
+.form-item-caption {
+	background-color: rgba(0, 0 ,0 , .8);
+	color: white;
+	height:auto;
+	padding:3px 0;
+	position: relative;
+}
+
 /**********************************************************************************************************************************************************
  * FOOTER
  *********************************************************************************************************************************************************/

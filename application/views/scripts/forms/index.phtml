@@ -1,14 +1,27 @@
-<?php $this->headLink()->appendStylesheet('/styles/application/forms/styles.css'); ?>
+<!-- Forms Presentation -->
 <section id="forms-content" class="page-content">
-	<header>
-		<hgroup>
-			<h1>Forms</h1>
-			<h4>This is a test page while I build the PDF generation module.</h4>
-			<h5>I repeat, test page.</h5>
-		</hgroup>
-	</header>
-	<br />
-	<section id="test-form-wrapper">
-		<?php echo $this->form; ?>
+	<section id="forms-menu" class="twelvecol">
+		<ul id="forms-menu-list" class="">
+			<li class="form-item-row">
+				<ul class="form-item">
+					<a href="forms/cremation-form">
+						<li class="form-item-img"><img src="/images/cremation_thumb.png" alt="Cremation Form" /></li>
+						<li class="form-item-caption">Cremation Authorization Form</li>
+					</a>
+				</ul>
+				<ul class="form-item">
+					<a href="forms/embalming-form">
+						<li class="form-item-img"><img src="/images/enbalming_thumb.png" alt="Embalming Form" /></li>
+						<li class="form-item-caption">Embalming Form</li>
+					</a>
+				</ul>
+				<ul class="form-item">
+					<a href="forms/registration-form">
+						<li class="form-item-img"><img src="/images/registration_thumb.png" alt="Registration Form" /></li>
+						<li class="form-item-caption">Registration Form</li>
+					</a>
+				</ul>
+			</li>
+		</ul>
 	</section>
 </section>
