@@ -161,6 +161,27 @@ li {
 
 /*
  *--------------------------
+ * Forms
+ *--------------------------
+ */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="phone"],
+input[type="number"],
+input[type="date"],
+select {
+    border: 2px solid #efdabf;
+}
+
+label {
+    color: #b57b10;
+    font-size: 14px;
+    text-align: left;
+}
+
+/*
+ *--------------------------
  * Floats
  *--------------------------
  */
@@ -324,6 +345,7 @@ li {
 
 #site-content {
     height: auto;
+    min-height: 400px;
     text-align: center;
     margin: 0 auto;
     padding: 10px 5px;

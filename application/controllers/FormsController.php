@@ -14,12 +14,6 @@ class FormsController extends Zend_Controller_Action
         
     }
 
-    public function cremationAction()
-    {
-        $form = new Form_Creamation();
-        $this->view->form = $form;
-    }
-
     public function submitFormAction()
     {
         if ($this->_request->isPost()) {
@@ -35,7 +29,8 @@ class FormsController extends Zend_Controller_Action
 
     public function cremationFormAction()
     {
-        // action body
+        $form = new Form_Creamation();
+        $this->view->form = $form;
     }
 
     public function embalmingFormAction()

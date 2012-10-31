@@ -70,7 +70,7 @@ class TMS_PDF_Pdf
 
 		for($i=0; $i<$count; $i++) {
 			foreach ($this->_form_objects as $k0 => $v0) {
-				foreach ($config->page_.$i as $k1 => $v1) {
+				foreach ($config->page_1 as $k1 => $v1) {
 					if($k0 == $k1) {
 						foreach ($v1 as $k2 => $v2) {
 							if($v0 !== '0' && $v0 !== '1') {
