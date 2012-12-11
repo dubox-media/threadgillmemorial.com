@@ -171,13 +171,21 @@ input[type="phone"],
 input[type="number"],
 input[type="date"],
 select {
-    border: 2px solid #efdabf;
+    height: auto;
+    font-size: 15px;
+    line-height: 15px;
+    padding:4px;
+    border: 4px solid #efdabf;
+    border-radius: 4px;
+    box-shadow: 4px 4px 4px #333;
+    outline: none;
 }
 
 label {
     color: #b57b10;
-    font-size: 14px;
+    font-size: 15px;
     text-align: left;
+    font-weight: 700;
 }
 
 /*
