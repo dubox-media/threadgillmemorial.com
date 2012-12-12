@@ -1,0 +1,104 @@
+{
+	"page_1": {
+		"name": {
+			"x": 161,
+			"y": 620
+		},
+		"gender": {
+			"x": 500,
+			"y": 620
+		},
+		"Male": {
+			"x": 500.5,
+			"y": 620
+		},
+		"Female": {
+			"x": 500.5,
+			"y": 620
+		},
+		"dob": {
+			"x": 130,
+			"y": 595
+		},
+		"dod": {
+			"x": 324,
+			"y": 595
+		},
+		"ssn": {
+			"x": 439,
+			"y": 595
+		},
+		"container": {
+			"x": 200,
+			"y": 490
+		},
+		"tray": {
+			"x": 294,
+			"y": 490
+		},
+		"container_other": {
+			"x": 369,
+			"y": 492
+		},
+		"creamated_remains_ship_initials": {
+			"x": 42,
+			"y": 210
+		},
+		"creamated_remains_ship_name": {
+			"x": 242,
+			"y": 212
+		},
+		"creamated_remains_ship_address": {
+			"x": 156,
+			"y": 200
+		},
+		"creamated_remains_called_for_by_initials": {
+			"x": 42,
+			"y": 179
+		},
+		"creamated_remains_called_for_by_name": {
+			"x": 249,
+			"y": 180
+		},
+		"signature": {
+			"x": 182,
+			"y": 128
+		},
+		"date": {
+			"x": 380,
+			"y": 128
+		},
+		"time": {
+			"x": 472,
+			"y": 128
+		},
+		"print_name": {
+			"x": 186,
+			"y": 105
+		},
+		"relationship": {
+			"x": 414,
+			"y": 105
+		},
+		"rel_address": {
+			"x": 175,
+			"y": 85
+		},
+		"telephone_nbr": {
+			"x": 437,
+			"y": 85
+		},
+		"witness": {
+			"x": 182,
+			"y": 54
+		},
+		"witness_date": {
+			"x": 388,
+			"y": 54
+		},
+		"witness_time": {
+			"x": 477,
+			"y": 54
+		}
+	}
+}

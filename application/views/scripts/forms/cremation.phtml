@@ -27,9 +27,9 @@
 				<!-- First Row -->
 				<li>
 					<ul>
-						<li id="n-o-d-wrapper"><input type="text" id="n-o-d" placeholder="Name of Decedent"></li>
+						<li id="n-o-d-wrapper"><input type="text" id="n-o-d" name="name" placeholder="Name of Decedent"></li>
 						<li id="gender-wrapper">
-							<select id="gender">
+							<select id="gender" name="gender">
 								<option value=" ">SEX</option>
 								<option value="male">Male</option>
 								<option value="female">Female</option>
@@ -38,7 +38,7 @@
 						<li id="d-o-b-wrapper">
 							<ul>
 								<li><label for="d-o-b">Date of Birth:</label></li>
-								<li><input type="date" id="d-o-b"/></li>
+								<li><input type="date" id="d-o-b" value="Month/Day/Year"/></li>
 							</ul>
 						</li>
 					</ul>
@@ -129,6 +129,15 @@
 						</li>
 						<li id="witness-date-wrapper">
 							<input type="date" id="witness-date" />
+						</li>
+					</ul>
+				</li>
+				<!-- 11th Row -->
+				<li>
+					<ul>
+						<li id="submit-wrapper">
+							<input type="hidden" value="cremation" name="form_name">
+							<input type="submit" id="cremation-submit" value="Submit Form" />
 						</li>
 					</ul>
 				</li>
