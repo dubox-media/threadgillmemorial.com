@@ -27,7 +27,7 @@ class FormsController extends Zend_Controller_Action
         
     }
 
-    public function cremationFormAction()
+    public function cremationAction()
     {
         $form = new Form_Creamation();
         $this->view->form = $form;

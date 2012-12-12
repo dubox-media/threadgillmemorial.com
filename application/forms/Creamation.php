@@ -19,13 +19,13 @@ class Form_Creamation extends Zend_Form
 		// Page 1 name	
 		$name = $this->createElement('text', 'name');
 		$name->setRequired(true)
+				 ->setAttrib('placeholder','Name of Decedent')
 				 ->setLabel('Name of decedent: ');
 		$this->addElement($name);
 
 		// Gender
 		$gender = $this->createElement('select','gender');
-		$gender->setLabel('SEX: ')
-					 ->addMultiOption('', '')	
+		$gender->addMultiOption(' ', 'SEX')	
 					 ->addMultiOption('male', 'Male')
 					 ->addMultiOption('female', 'Female')
 					 ->setRequired(true);
@@ -33,19 +33,19 @@ class Form_Creamation extends Zend_Form
 
 		// DoB
 		$dob = $this->createElement('text', 'dob');
-		$dob->setLabel('Date of Birth: ')
+		$dob->setAttrib('placeholder', 'Date of Birth')
 				->setRequired(true);
 		$this->addElement($dob);
 
 		// DoD
 		$dod = $this->createElement('text', 'dod');
-		$dod->setLabel('Date of Death: ')
+		$dod->setAttrib('placeholder', 'Date of Death')
 				->setRequired(true);
 		$this->addElement($dod);
 
 		// SSN
 		$ssn = $this->createElement('text', 'ssn');
-		$ssn->setLabel('SSN: ')
+		$ssn->setAttrib('placeholder', 'Social Security Number')
 				->setRequired(true);
 		$this->addElement($ssn);
 

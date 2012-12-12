@@ -1,14 +1,138 @@
-
+<!-- Forms Presentation -->
 <section id="forms-content" class="page-content">
 	<header>
-		<hgroup>
-			<h1>Forms</h1>
-			<h4>This is a test page while I build the PDF generation module.</h4>
-			<h5>I repeat, test page.</h5>
-		</hgroup>
+		<h1>Forms &amp; Registration</h1>
 	</header>
-	<br />
-	<section id="test-form-wrapper">
-		<?php echo $this->form; ?>
+	<section class="clear-15"></section>
+	<section class="threecol">
+	<nav id="forms-nav" class="">
+		<hgroup>
+			<h6>--- Please Select ---</h6>
+		</hgroup>
+		<ul>
+			<li><a href="/forms/registration">Registration Form</a></li>
+			<li><a href="/forms/cremation">Cremation Authorization Form</a></li>
+			<li><a href="/forms/embalming">Embalming Form</a></li>
+		</ul>
+	</nav>
+</section>
+	<section id="form-wrapper" class="ninecol last">
+		<header>
+			<hgroup>
+				<h5>Cremation Authorization</h5>
+			</hgroup>
+		</header>
+		<form id="cremation form" action="/forms/submit-form" method="POST">
+			<ul>
+				<!-- First Row -->
+				<li>
+					<ul>
+						<li id="n-o-d-wrapper"><input type="text" id="n-o-d" placeholder="Name of Decedent"></li>
+						<li id="gender-wrapper">
+							<select id="gender">
+								<option value=" ">SEX</option>
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+							</select>
+						</li>
+						<li id="d-o-b-wrapper">
+							<ul>
+								<li><label for="d-o-b">Date of Birth:</label></li>
+								<li><input type="date" id="d-o-b"/></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<!-- Second Row -->
+				<li>
+					<ul>
+						<li id="ssn-wrapper"><input type="text" id="ssn" placeholder="Social Security Number" /></li>
+					</ul>
+				</li>
+				<!-- Third Row -->
+				<li>
+					<ul>
+						<li id="container-wrapper">
+							<ul>
+								<li><label>Select: </label></li>
+								<li class="unchecked"><input type="checkbox" id="container" /></li>
+								<li><label for="container">:Casket or Cremation Container</label></li>
+								<li class="unchecked"><input type="checkbox" id="tray"/></li>
+								<li><label>:Combustible Tray - or </label></li>
+							</ul>
+						</li>
+						<li id="other-wrapper">
+							<input type="text" placeholder="Other" id="other-container">
+						</li>
+					</ul>
+				</li>
+				<!-- Fourth Row -->
+				<li>
+					<ul>
+						<li id="cremated-name-wrapper"><input type="text" id="cremated-name" placeholder="Cremated remains are to be sent to (Name)" /></li>
+					</ul>
+				</li>
+				<!-- Fifth Row -->
+				<li>
+					<ul>
+						<li class="cremated-address-wrapper">
+							<input type="text" id="cremated-address" placeholder="Address" />
+						</li>
+						<li class="cremated-city-wrapper">
+							<input type="text" placeholder="City, State, Zip" id="cremated-city" />
+						</li>
+					</ul>
+				</li>
+				<!-- Sixth Row -->
+				<li>
+					<ul>
+						<li id="cremated-will-call-wrapper">
+							<input type="text" id="cremated-will-call" placeholder="Cremated remains will be called for by (Name)" />
+						</li>
+						<li id="cremated-will-call-date-wrapper">
+							<input type="date" id="cremated-will-call-date" />
+						</li>
+					</ul>
+				</li>
+				<!-- Seventh Row -->
+				<li>
+					<ul>
+						<li id="cremated-rel-wrapper">
+							<input type="text" id="cremated-rel" placeholder="Relationship" />
+						</li>
+					</ul>
+				</li>
+				<!-- Eighth Row -->
+				<li>
+					<ul>
+						<li class="cremated-address-wrapper">
+							<input type="text" id="cremated-address" placeholder="Address" />
+						</li>
+						<li class="cremated-city-wrapper">
+							<input type="text" placeholder="City, State, Zip" id="cremated-city" />
+						</li>
+					</ul>
+				</li>
+				<!-- Ninth Row -->
+				<li>
+					<ul>
+						<li id="cremated-tel-wrapper">
+							<input type="phone" id="cremated-tel" placeholder="Telephone Number" />
+						</li>
+					</ul>
+				</li>
+				<!-- Tenth Row -->
+				<li>
+					<ul>
+						<li id="witness-wrapper">
+							<input type="text" id="witness" placeholder="Witness (Name)" />
+						</li>
+						<li id="witness-date-wrapper">
+							<input type="date" id="witness-date" />
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</form>
 	</section>
 </section>
