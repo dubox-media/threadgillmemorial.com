@@ -33,12 +33,12 @@ class FormsController extends Zend_Controller_Action
         $this->view->form = $form;
     }
 
-    public function embalmingFormAction()
+    public function embalmingAction()
     {
         // action body
     }
 
-    public function registrationFormAction()
+    public function registrationAction()
     {
         // action body
     }

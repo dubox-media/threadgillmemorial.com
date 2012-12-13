@@ -1,0 +1,281 @@
+	<header>
+		<h1>Forms &amp; Registration</h1>
+	</header>
+	<section class="clear-15"></section>
+	<section class="threecol">
+	<nav id="forms-nav" class="">
+		<hgroup>
+			<h6>--- Please Select ---</h6>
+		</hgroup>
+		<ul>
+			<li><a href="/forms">Registration Form</a></li>
+			<li><a href="/forms/cremation">Cremation Authorization Form</a></li>
+			<li><a href="/forms/embalming">Embalming Form</a></li>
+		</ul>
+	</nav>
+</section>
+	<section id="form-wrapper" class="ninecol last">
+		<header>
+			<hgroup>
+				<h5>Registration</h5>
+			</hgroup>
+		</header>
+		<form id="registration" action="/forms/submit-form" method="POST">
+			<ul>
+				<!-- First Row -->
+				<li>
+					<ul>
+						<li class="wrapper-80"><input type="text" id="name" name="name" placeholder="Information for: (First, Middle, Last)"></li>
+						<li id="" class="wrapper-10">
+							<select id="gender" name="gender">
+								<option value=" ">SEX</option>
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+							</select>
+						</li>
+					</ul>
+				</li>
+				<!-- Row 1a -->
+				<li>
+					<ul>
+						<li class="wrapper-53">
+							<ul class="wrapper-100">
+								<li><label for="d-o-b">Place of Birth:</label></li>
+								<li class="wrapper-75"><input type="text" id="d-o-b" placeholder="City and State or Foreign Country"/></li>
+							</ul>
+						</li>
+						<li id="">
+							<ul>
+								<li><label for="d-o-b">Date of Birth:</label></li>
+								<li><input type="date" id="d-o-b" name="d-o-b" value="Month/Day/Year"/></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<!-- Second Row -->
+				<li>
+					<ul>
+						<li class="wrapper-60 flush"><input type="text" id="ssn" placeholder="Social Security Number" /></li>
+					</ul>
+				</li>
+				<!-- Third Row -->
+				<li>
+					<ul>
+						<li class="wrapper-80">
+							<ul class="wrapper-100">
+								<li><label>Armed Services: </label></li>
+								<li class="wrapper32" name="gender-wrapper">
+									<select id="gender" name="gender">
+										<option value="yes">Yes</option>
+										<option value="no" selected>No</option>
+									</select>
+								</li>
+								<li class="wrapper-60"><input type="text" placeholder="Branch of Service"></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<!-- Fourth Row -->
+				<li>
+					<ul>
+						<li class="wrapper-53">
+							<input type="text" id="occupation" name="occupation" placeholder="Occupation (Do not use 'retired')" />
+						</li>
+						<li class="wrapper-43">
+							<input type="text" id="business" name="business" placeholder="Kind of Business/Industry" />
+						</li>
+					</ul>
+				</li>
+				<!-- Fifth Row -->
+				<li>
+					<ul>
+						<li class="wrapper-43">
+							<input type="text" id="marital-status" name="marital-status" placeholder="Marital Status (Married, Never Married, Widowed, Divorced)" />
+						</li>
+						<li class="wrapper-53">
+							<input type="text" placeholder="Name of Spouse (Use Maiden name of Widow or spouse if applicable)" id="spouse" name="spouse" />
+						</li>
+					</ul>
+				</li>
+				<!-- Sixth Row -->
+				<li>
+					<ul>
+						<li class="wrapper-30">
+							<input type="text" id="residence-state" placeholder="Residence State" name="residence-state" />
+						</li>
+						<li class="wrapper-30">
+							<input type="text" id="residence-county" placeholder="Residence County" name="residence-county" />
+						</li>
+						<li class="wrapper-30">
+							<input type="text" id="residence-city" placeholder="Residence City/Town" name="residence-city" />
+						</li>
+					</ul>
+				</li>
+				<!-- Seventh Row -->
+				<li>
+					<ul>
+						<li class="wrapper-43">
+							<input type="text" id="address" name="address" placeholder="Address" />
+						</li>
+						<li id="zip-wrapper">
+							<input type="text" id="zip" name="zip" placeholder="Zip Code" />
+						</li>
+						<li id="phone-wrapper">
+							<input type="phone" id="phone" name="phone" placeholder="Phone Number" />
+						</li>
+					</ul>
+				</li>
+				<!-- Race Row -->
+				<li>
+					<ul>
+						<li class="wrapper-60 flush">
+							<input type="text" id="race" name="race" placeholder="Race (American Indian, Black, White, etc)" />
+						</li>
+					</ul>
+				</li>
+				<!-- Eighth Row -->
+				<li>
+					<ul>
+						<li class="wrapper-32">
+							<label for="hispanic">Hispanic Origin? </label>
+							<select id="hispanic" name="hispanic" class="wrapper-53">
+								<option value="yes">Yes</option>
+								<option value="no">No</option>
+							</select>
+						</li>
+							<li class="wrapper-53"><input type="text" name="hispanic-heritage" id="hispanic-heritage" placeholder="If yes, please specify (Cuban, Mexian, Puerto Rican, etc)" ></li>
+						</li>
+					</ul>
+				</li>
+				<!-- Ninth Row -->
+				<li>
+					<ul>
+						<li class="wrapper-43 flush">
+							<input type="text" id="education" placeholder="Education (specify highest grade completed only)" />
+						</li>
+					</ul>
+				</li>
+				<!-- Tenth Row -->
+				<li>
+					<ul>
+						<li class="wrapper-53">
+							<input type="text" id="father" placeholder="Father's Name (First, Middle, Last)" />
+						</li>
+						<li class="wrapper-43">
+							<input type="text" id="mother" placeholder="Mother's Name (First, Middle, Last)" />
+						</li>
+					</ul>
+				</li>
+				<!-- Eleventh Row -->
+				<li>
+					<ul>
+						<li class="wrapper-43">
+							<input type="text" id="physician" name="physician" placeholder="Attending Physician's Name" />
+						</li>
+						<li class="wraper-53">
+							<input type="text" id="physician-phone" name="physician-phone" placeholder="Physician Phone" />
+						</li>
+					</ul>
+				</li>
+				<!-- Twelfth Row -->
+				<li>
+					<ul>
+						<li class="wrapper-60 flush">
+							<input type="text" id="physician-address" name="physician-adress" placeholder="Attending Physician's Address" />
+						</li>
+					</ul>
+				</li>
+				<!-- Thirteenth Row -->
+				<li>
+					<ul>
+						<li class="wrapper-53">
+							<input type="text" id="kin-name" name="kin-name" placeholder="Next of Kin Name" />
+						</li>
+						<li class="wrapper-43">
+							<input type="text" id="kin-rel" name="kin-rel" placeholder="Next of Kin Relationship" />
+						</li>
+					</ul>
+				</li>
+				<!-- Fourteenth Row -->
+				<li>
+					<ul>
+						<li class="wrapper-60 flush">
+							<input type="text" id="kin-address" name="kin-address" placeholder="Next of Kin Address" />
+						</li>
+					</ul>
+				</li>
+				<!-- Fifthteenth Row -->
+				<li>
+					<ul>
+						<li class="wrapper-43">
+							<input type="phone" id="kin-phone" name="kin-phone" placeholder="Next of Kin Phone" />
+						</li>
+						<li class="wrapper-53">
+							<input type="phone" id="kin-work" name="kin-work" placeholder="Next of Kin Work Phone" />
+						</li>
+					</ul>
+				</li>
+				<!-- Sixteenth Row -->
+				<li>
+					<ul>
+						<li id="washington-wrapper">
+
+							<label for="washington-smoked">Washington Residents ONLY: Has the person smoked within the last 15 years?</label>
+						</li>
+						<li>
+							<select id="washington-smoked" name="washington-smoked">
+								<option value="yes">Yes</option>
+								<option values="no">No</option>
+							</select>
+						</li>
+					</ul>
+				</li>
+				<!-- Seventeenth Row -->
+				<li>
+					<ul>
+						<li id="clark-county-wrapper">
+							<label for="clark-county">How long a resident of Clark County?</label>
+							<input type="number" id="clark-county" name="clark-county" >
+						</li>
+						<li id="kin-work-wrapper">
+							<input type="phone" id="kin-work" name="kin-work" placeholder="Next of Kin Work Phone" />
+						</li>
+					</ul>
+				</li>
+				<!-- Eighteenth Row -->
+				<li>
+					<ul>
+						<li id="washington-wrapper">
+							<label for="types-of-service">Types of Service</label>
+							</li>
+							<li>
+							<select id="types-of-service" name="types-of-service">
+								<option>Complete Funeral Service with viewing</option>
+								<option>Memorial Service with or without viewing-Cremation</option>
+								<option>Memorial Service with or without viewing</option>
+								<option>Niche Side Service with or without viewing</option>
+								<option>Graveside Service with or without viewing</option>
+								<option>Family Gathering with viewing</option>
+								<option>Family Gathering with viewing</option>
+								<option>Direct Cremation with or without viewing</option>
+								<option>Immediate Burial with or without viewing</option>
+								<option>Ship out of State</option>
+								<option>Complete Funeral Service with viewing</option>
+								<option>Anatomical Donation</option>
+							</select>
+						</li>
+					</ul>
+				</li>
+				<!-- 11th Row -->
+				<li>
+					<ul>
+						<li id="submit-wrapper" class="flush">
+							<input type="hidden" value="cremation" name="form_name">
+							<input type="submit" id="cremation-submit" value="Submit Form" />
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</form>
+	</section>
+	<section class="clear-15"></section>
