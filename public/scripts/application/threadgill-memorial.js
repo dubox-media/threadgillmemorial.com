@@ -59,6 +59,9 @@
 		 * @desc: public object to modularize reptitive code/utilities
 		 */
 		_utils: {
+			
+		},
+		_UI: {
 			accordion: function(elem) {
 				var self = window.TM;
 
@@ -72,8 +75,41 @@
 						$(elem).removeClass('opened').addClass('closed');
 					});
 				}
+			},
+			_checkbox: {
+				init: function(elem, grouping, max) {
+					var self = this;
 
-			}
+					// If grouping is supplied
+					this.grouping = grouping || false;
+					this.cbx = $(elem);
+					this.max = max || 1;
+
+					if(this.cbx.is('.checked')) {
+						this.uncheck(this.cbx);
+					} else if(this.cbx.is('.unchecked')) {
+						this.check(this.cbx);
+					}
+
+					if(grouping) {
+						if(grouping.children().find('.checked').length > this.max) {
+							$('.checked').each(function() {
+								if($(this).is(self.cbx) == false) {
+									self.uncheck($(this))
+								}
+							});
+						}
+					}
+				},
+				uncheck: function(elem) {
+					elem.removeClass('checked').addClass('unchecked');
+					elem.children('input[type=checkbox]').prop('checked', false);
+				},
+				check: function(elem) {
+					elem.removeClass('unchecked').addClass('checked');
+					elem.children('input[type=checkbox]').prop('checked', true);
+				}
+			},
 		},
 		/**
 		 * ----------
@@ -142,6 +178,11 @@
 			$('.accordion>header').live('click', function(e) {
 				console.log(e);
 				self._utils.accordion(this);
+			});
+
+			// checkboxes
+			$('.unchecked, .checked').live('click', function(e) {
+				self._UI._checkbox.init(this, $('#container-wrapper'));
 			});
 		}
 	}
