@@ -38,7 +38,7 @@
 						<li id="d-o-b-wrapper">
 							<ul>
 								<li><label for="d-o-b">Date of Birth:</label></li>
-								<li><input type="date" id="d-o-b" value="Month/Day/Year"/></li>
+								<li><input type="date" id="d-o-b" name="dob" value="Month/Day/Year"/></li>
 							</ul>
 						</li>
 					</ul>
@@ -46,7 +46,7 @@
 				<!-- Second Row -->
 				<li>
 					<ul>
-						<li id="ssn-wrapper"><input type="text" id="ssn" placeholder="Social Security Number" /></li>
+						<li id="ssn-wrapper"><input type="text" id="ssn" name="ssn" placeholder="Social Security Number" /></li>
 					</ul>
 				</li>
 				<!-- Third Row -->
@@ -55,9 +55,9 @@
 						<li id="container-wrapper">
 							<ul>
 								<li><label>Select: </label></li>
-								<li class="unchecked"><input type="checkbox" id="container" /></li>
+								<li class="unchecked"><input type="checkbox" id="container" value="X" name="container"/></li>
 								<li><label for="container">:Casket or Cremation Container</label></li>
-								<li class="unchecked"><input type="checkbox" id="tray"/></li>
+								<li class="unchecked"><input type="checkbox" id="tray" name="tray" value="X" /></li>
 								<li><label>:Combustible Tray - or </label></li>
 							</ul>
 						</li>
@@ -124,11 +124,11 @@
 				<!-- Tenth Row -->
 				<li>
 					<ul>
-						<li id="witness-wrapper">
-							<input type="text" id="witness" placeholder="Witness (Name)" />
+						<li class="wrapper-53">
+							<input type="text" id="witness" name="witness" placeholder="Witness (Name)" />
 						</li>
-						<li id="witness-date-wrapper">
-							<input type="date" id="witness-date" />
+						<li class="wrapper-30">
+							<input type="date" id="witness-date" name="witness_date" />
 						</li>
 					</ul>
 				</li>
