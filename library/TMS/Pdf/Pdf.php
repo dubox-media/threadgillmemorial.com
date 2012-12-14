@@ -67,10 +67,15 @@ class TMS_PDF_Pdf
 		$pdf = Zend_Pdf::load(APPLICATION_PATH . '/../docs/PDF/'.$this->_form_type.'.pdf');
 		$font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
 		$count  = count($pdf->pages);
+		$curr_page = '';
 
 		for($i=0; $i<$count; $i++) {
 			foreach ($this->_form_objects as $k0 => $v0) {
-				foreach ($config->page_1 as $k1 => $v1) {
+				$curr_page = 'page_'.$i;
+				// foreach (get_object_vars($config) as $key => $value) {
+				// 	# code...
+				// }
+				foreach ($config->{'page_'.$i} as $k1 => $v1) {
 					if($k0 == $k1) {
 						foreach ($v1 as $k2 => $v2) {
 							if($v0 !== '0' && $v0 !== '1') {
@@ -115,7 +120,7 @@ class TMS_PDF_Pdf
 			if(file_exists($this->_file_path))
 			{
 				try {
-					$mail = new TMS_Mail_Mail('Form submission', 'stowell.kt@gmail.com', 'cremation', $this->_file_path, $send_name);
+					// $mail = new TMS_Mail_Mail('Form submission', 'stowell.kt@gmail.com', 'cremation', $this->_file_path, $send_name);
 				} catch(Exception $e) {
 					throw new Exception($e);
 				}
