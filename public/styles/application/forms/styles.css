@@ -46,7 +46,6 @@
 	height: 32px;
 	margin: 5px auto 5px auto;
 	text-align: center;
-	background-image: url('/images/form_nav_bg.png');
 	background-repeat: no-repeat;
 }
 
@@ -175,48 +174,6 @@ select {
  * Specific Form Elements
  * ----------------------
  */
-.flush {
-	margin:0 !important;
-}
-
-.wrapper-100 {
-	width:100%;
-}
-
-.wrapper-80 {
-	width: 80%;
-}
-
-.wrapper-75 {
-	width:75%;
-}
-
-.wrapper-60 {
-	width: 60%;
-}
-.wrapper-53 {
-	width:53%;
-}
-
-.wrapper-43 {
-	width: 43%;
-}
-
-.wrapper-32 {
-	width: 32.7%;
-}
-
-.wrapper-30 {
-	width: 30%;
-}
-
-.wrapper-20 {
-	width: 20%;
-}
-
-.wrapper-10 {
-	width: 10%;
-}
 
 #n-o-d-wrapper {
 	width:53%;
