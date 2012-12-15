@@ -120,11 +120,10 @@ class TMS_PDF_Pdf
 			if(file_exists($this->_file_path))
 			{
 				try {
-					// $mail = new TMS_Mail_Mail('Form submission', 'stowell.kt@gmail.com', 'cremation', $this->_file_path, $send_name);
+					// $mail = new TMS_Mail_Mail('Form submission', 'stowell.kt@gmail.com', 'cremation', $this->_file_path, $send_name, NULL);
 				} catch(Exception $e) {
 					throw new Exception($e);
 				}
-				// $mail = new TMS_M_Mail('Form submission', 'stowell.kt@gmail.com', 'creamation', $this->_file_path);
 			} else {
 				return false;
 			}
