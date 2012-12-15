@@ -28,13 +28,14 @@ class TMS_Mail_Mail
 	/**
 	 * Constructor
 	 */
-	public function __construct($subject, $to=NULL, $body, $attachment=NULL, $att_name=NULL)
+	public function __construct($subject, $to=NULL, $body, $attachment=NULL, $att_name=NULL, $use_config=NULL)
 	{
 		$this->subject = $subject;
 		$this->to = ($to == NULL)? 'stowell.kt@gmail.com' : $to;
 		$this->body = $body;
 		$this->attachment = ($attachment !== NULL) ? file_get_contents($attachment) : $attachment;
 		$this->att_name = $att_name;
+		$this->use_config = $use_config;
 		$this->_mail = new Zend_Mail();
 
 		$this->build_mail();
@@ -46,21 +47,25 @@ class TMS_Mail_Mail
 	public function build_mail()
 	{
 
-		// Load config
-		try {		
-			$message_body = new Zend_Config_Json(APPLICATION_PATH . '/configs/mail/messages.json');
-		} catch(Exception $e) {
-			throw Exception("Error Processing Request - contact site administrator", 1, $e);
-		}
+		if($this->use_config) {
+			// Load config
+			try {		
+				$message_body = new Zend_Config_Json(APPLICATION_PATH . '/configs/mail/messages.json');
+			} catch(Exception $e) {
+				throw Exception("Error Processing Request - contact site administrator", 1, $e);
+			}
 
-		// Set message body
-		foreach ($message_body as $key => $value) {
-			if($key == $this->body)
-			{
-				foreach ($value as $message_field => $message) {
-					$this->_mail->setBodyHtml($message);
-				}			
-			} 
+			// Set message body
+			foreach ($message_body as $key => $value) {
+				if($key == $this->body)
+				{
+					foreach ($value as $message_field => $message) {
+						$this->_mail->setBodyHtml($message);
+					}			
+				} 
+			}
+		} else {
+			$this->_mail->setBodyHtml($this->body);
 		}
 
 		// Set subject
