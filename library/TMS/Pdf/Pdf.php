@@ -72,9 +72,6 @@ class TMS_PDF_Pdf
 		for($i=0; $i<$count; $i++) {
 			foreach ($this->_form_objects as $k0 => $v0) {
 				$curr_page = 'page_'.$i;
-				// foreach (get_object_vars($config) as $key => $value) {
-				// 	# code...
-				// }
 				foreach ($config->{'page_'.$i} as $k1 => $v1) {
 					if($k0 == $k1) {
 						foreach ($v1 as $k2 => $v2) {

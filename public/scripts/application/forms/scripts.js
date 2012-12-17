@@ -91,47 +91,7 @@
 		 * @desc: Object to house event bindings.
 		 */
 		bind_events: function() {
-			var self = this;
-
-			$('.form-item').live('mouseenter', function() {
-				// self.caption(this,'show');
-				var trgt = $(this).children().children('.form-item-caption');
-
-				trgt.stop(true, false).delay(100).animate({
-					'top': '-='+($(trgt).height()+10)
-				}, 200, 'swing', function() {
-				
-				});
-			});
-
-			$('.form-item').live('mouseleave', function() {
-				// self.caption(this,'show');
-				var trgt = $(this).children().children('.form-item-caption');
-
-				trgt.stop(true, false).animate({
-					'top': '+='+($(trgt).height()+10)
-				}, 200, 'swing', function() {
-					$(this).css({
-					'top' : '0'
-				});
-				});
-			});
-		},
-		/**
-		 * -------
-		 * CAPTION
-		 * -------
-		 */
-		caption: function(elem, action) {
-			var self = this;
-			console.log(elem, $(elem).find('.form-item-caption').height());
-			var trgt = $(elem).children().children('.form-item-caption');
-			console.log(trgt);
-			trgt.animate({
-				'top': (action == 'show')? '-='+$(this).height() : '+='+$(this).height()
-			}, 200, function() {
-				console.log(this);
-			});
+			
 		}
 	}
 	// Instantiate the local object and push it to the window object

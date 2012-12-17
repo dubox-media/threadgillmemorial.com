@@ -177,7 +177,7 @@
 			// Accordion
 			$('.accordion>header').live('click', function(e) {
 				console.log(e);
-				self._utils.accordion(this);
+				self._UI.accordion(this);
 			});
 
 			// checkboxes
