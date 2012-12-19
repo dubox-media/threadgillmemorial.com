@@ -67,11 +67,11 @@
 
 				// If closed:
 				if($(elem).is('.closed')) {
-					$(elem).parent().children('.accordion-content').slideDown(400, function() {
+					$(elem).closest('.accordion').find('.accordion-content').slideDown(400, function() {
 						$(elem).removeClass('closed').addClass('opened');
 					});
 				} else {
-					$(elem).parent().children('.accordion-content').slideUp(400, function() {
+					$(elem).closest('.accordion').find('.accordion-content').slideUp(400, function() {
 						$(elem).removeClass('opened').addClass('closed');
 					});
 				}
@@ -174,15 +174,13 @@
 		bind_events: function() {
 			var self = this;
 
-			// Accordion
-			$('.accordion>header').live('click', function(e) {
-				console.log(e);
-				self._UI.accordion(this);
-			});
-
 			// checkboxes
 			$('.unchecked, .checked').live('click', function(e) {
 				self._UI._checkbox.init(this, $('#container-wrapper'));
+			});
+
+			$('.opened, .closed').live('click', function() {
+				self._UI.accordion(this);
 			});
 		}
 	}

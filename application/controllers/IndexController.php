@@ -10,7 +10,8 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
+    		$this->view->headLink()->appendStylesheet('/styles/application/index/styles.css');
+        $this->view->headScript()->appendFile('/scripts/application/index/scripts.js');
     }
 
 

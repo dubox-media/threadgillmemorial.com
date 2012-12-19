@@ -1,8 +1,6 @@
 /**********************************************************************************************************************************************************
  * IMPORTED STYLES
  *********************************************************************************************************************************************************/
-/* Application styles */
-@import url('index/styles.css');
 
 /* Library styles */
 @import url('../libs/1140/1140.css');
@@ -70,6 +68,11 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 44px;
     font-size: 4.4rem;
+}
+
+h2 {
+    font-size: 34px;
+    font-size: 3.4rem;
 }
 
 h5 {
@@ -145,29 +148,6 @@ li {
  *--------------------------
  */
 
-.closed {
-    background-image: url('/images/accordion_arrow_closed.png');
-    background-position: 2px 2px;
-    background-repeat: no-repeat;
-}
-
-.opened {
-    background-image: url('/images/accordion_arrow_opened.png');
-    background-position: 2px 2px;
-    background-repeat: no-repeat;
-}
-
-.accordion-content {
-    display: none;
-    padding: 10px;
-}
-
-.accordion-content p {
-    margin:0;
-    text-align: left;
-    font-size: 14px;
-    font-size: 1.4rem;
-}
 
 /*
  *--------------------------
@@ -326,6 +306,12 @@ select {
     clear: both;
     min-height: 15px;
     height: 15px;
+}
+
+.clear-10 {
+    clear: both;
+    min-height: 10px;
+    height: 10px;
 }
 
 /**********************************************************************************************************************************************************
@@ -528,6 +514,7 @@ select {
 #site-content {
     height: auto;
     min-height: 400px;
+    max-height: 690px;
     text-align: center;
     margin: 0 auto;
     padding: 10px 5px;
@@ -565,6 +552,132 @@ select {
 }
 
 #who-we-are .column-content p {
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+.column {
+    padding: 20px 0;
+}
+
+.column>header {
+    width: 100%;
+    margin: 0 auto 15px auto;
+}
+
+.column>header img {
+    float: left;
+}
+
+.column>header h2 {
+    font-size: 19px;
+  font-size: 1.9rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  position: relative;
+  top:30px;
+}
+
+.column>header article {
+    clear: both;
+    margin:0 auto;
+    text-align: center;
+}
+
+.column>header article p {
+    font-size: 14px;
+    font-size:1.4rem;
+    color:  #b57b10;
+    font-weight: bold;
+    margin:0 auto;
+    text-align: left;
+}
+
+.column>article p {
+    font-size: 12px;
+    font-size:1.2rem;
+}
+
+.column figure img {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.column .sub-menu {
+    clear: both;
+    background-image: url('/images/accordion_border.png');
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+    text-align: center;
+    margin: 10px auto;
+    width: 100%;
+}
+
+.sub-menu figure {
+    width:auto;
+    float: left;
+    margin:3px  10px 0 0;
+}
+
+.sub-menu article {
+    text-align: left;
+    float: left;
+    width:75%;
+}
+
+.sub-menu article p {
+    text-align: left;
+    margin:0;
+    padding:0;
+}
+
+.sub-menu article h2 {
+    color:#b57b10;
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin:0;
+    padding:0;
+}
+
+footer .accordion {
+    width: 78%;
+    background-image: url('/images/accordion_border.png');
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+footer .accordion>header {
+    padding: 0 0 5px 15px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 13px;
+    font-size: 1.3rem;
+    background-image: none;
+}
+
+footer .closed {
+    background-image: url('/images/accordion_arrow_closed.png') !important;
+    background-position: 2px 2px;
+    background-repeat: no-repeat;
+}
+
+footer .opened {
+    background-image: url('/images/accordion_arrow_opened.png') !important;
+    background-position: 2px 2px;
+    background-repeat: no-repeat;
+}
+
+footer .accordion-content {
+    display: none;
+    padding: 10px;
+    border: none;
+}
+
+footer .accordion-content p {
+    margin:0;
+    text-align: left;
     font-size: 14px;
     font-size: 1.4rem;
 }
