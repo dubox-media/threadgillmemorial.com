@@ -485,6 +485,10 @@ select {
     background-image: url('/images/form_nav_bg.png');
 }
 
+.content-wrapper {
+    max-height: 690px;
+}
+
 .content-wrapper>header h5{
     clear: both;
 }
@@ -501,6 +505,14 @@ select {
     font-weight: lighter;
     margin: 0 0 5px 0;
 }
+
+.items-wrapper {
+    padding:0;
+    margin:0;
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 /**********************************************************************************************************************************************************
 * CONTENT
 **********************************************************************************************************************************************************/
@@ -514,17 +526,18 @@ select {
 #site-content {
     height: auto;
     min-height: 400px;
-    max-height: 690px;
     text-align: center;
     margin: 0 auto;
     padding: 10px 5px;
 }
 
 .page-content {
+    overflow: hidden;
     background-color: white;
     border:3px solid #ffecbf;
     height:auto;
     min-height: 400px;
+    max-height: 690px;
     padding: 25px 20px;
 }
 

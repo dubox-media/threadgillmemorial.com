@@ -33,7 +33,7 @@
  *--------------------------
  */
 .accordion {
-    width: 100%;
+    width: 98%;
     margin: 10px 0;
 }
 
@@ -85,6 +85,9 @@
     background-image: url('/images/minus.png');
 }
 
+.accordion:not(:first-child) .accordion-content {
+    display: none;
+}
 .accordion-content {
     height:auto;
     border-left: 1px solid #f5d590;
