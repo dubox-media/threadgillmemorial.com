@@ -200,10 +200,16 @@ li {
 }
 /*
  *--------------------------
- * Accordions 
+ * Address 
  *--------------------------
  */
-
+address {
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 18px;
+    font-size: 1.8rem;
+    color: #999;
+}
 
 /*
  *--------------------------
