@@ -51,6 +51,8 @@
 
 .slide  img {
     width: auto;
+    padding:0;
+    margin:0;
 }
 
 .slide li {

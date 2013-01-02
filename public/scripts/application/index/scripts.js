@@ -95,7 +95,6 @@
 
 			// Accordion
 			$('.accordion>header').live('click', function(e) {
-				console.log(e);
 				window.TM._UI.accordion(this);
 			});
 		}

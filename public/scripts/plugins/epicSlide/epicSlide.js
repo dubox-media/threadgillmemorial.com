@@ -378,6 +378,7 @@
 					
 					// Positional data
 					var position = $(this).position();
+					console.log(this, position);
 
 					// Top css property
 					var top = (sld.dir == 'top')?  position.top + self.h 
@@ -388,8 +389,8 @@
 					// Left css property
 					var left = (sld.dir == 'top')?  position.left
 						: (sld.dir == 'bottom')? position.left
-							: (sld.dir == 'left')? position.left+self.w 
-								: (sld.dir == 'right')? position.left - self.w : null;			
+							: (sld.dir == 'left')? position.left+(self.w) 
+								: (sld.dir == 'right')? position.left - (self.w) : null;			
 
 					// Build string selector for each slide after the current one in the loop
 					var selector = self._eS.sld+'[data-number='+(parseInt(sld.num)+1)+']';
@@ -399,6 +400,7 @@
 						'top': top,
 						'left': left
 					});
+					console.log(left, top);
 				});
 
 				// Launch animation
@@ -498,4 +500,4 @@
 	};
 })(jQuery);
 
-/************************************************************* END ***************************************************************************************/
+/************************************************************* END **************************************************************************************/
