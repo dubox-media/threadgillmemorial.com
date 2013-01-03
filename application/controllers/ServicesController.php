@@ -29,4 +29,29 @@ class ServicesController extends Zend_Controller_Action
 	{
 
 	}
+
+	public function onlineMemorialsAction()
+	{
+
+	}
+
+	public function obituariesAction()
+	{
+
+	}
+
+	public function socialSecurityAction()
+	{
+
+	}
+
+	public function deathCertificatesAction()
+	{
+
+	}
+
+	public function afterCareAction()
+	{
+		
+	}
 }
