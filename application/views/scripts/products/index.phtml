@@ -1,20 +1,21 @@
+<?php $this->headScript()->appendFile('/scripts/application/products/scripts.js'); ?>
 <section id="products-content" class="page-content">
 	<header>
 		<h1>Our Products</h1>
 	</header>
 	<section class="clear-15"></section>
-	<section class="threecol page-menu">
-		<nav id="products-nav" class="">
-		<hgroup>
-			<h6>--- Please Select ---</h6>
-		</hgroup>
-		<ul>
-			<li><a href="/products/caskets">Caskets</a></li>
-			<li><a href="/products/urns">Urns</a></li>
-		</ul>
-	</nav>
+	<section class="onecol page-menu">
+		<!-- <nav id="products-nav" class="">
+			<hgroup>
+				<h6>--- Please Select ---</h6>
+			</hgroup>
+			<ul>
+				<li><a href="/products/caskets">Caskets</a></li>
+				<li><a href="/products/urns">Urns</a></li>
+			</ul>
+		</nav> -->
 	</section>
-	<section class="ninecol last content-wrapper">
+	<section class="elevencol last content-wrapper">
 		<header>
 			<hgroup>
 				<h5>Featured caskets and urns</h5>
@@ -22,60 +23,133 @@
 		</header>
 		<section class="items-wrapper">
 			<!-- First -->
-			<section class="accordion product-listing">
-				<header>
-					<figure class="onecol">
-						<img src="/images/urn.jpg" width="42px" height="42px" />
-					</figure>
-					<hgroup class="tencol">
-						<h2>Casket Name</h2>
-					</hgroup>
-					<span class="toggle opened onecol last"></span>
-					<div class="clear-10"></div>
-				</header>
-				<section class="accordion-content">
-					<figure class="fourcol">
-						<img src="/images/urn-large.jpg">
-					</figure>
-					<article class="eightcol last">
-						<header>
-								<h5>The Super Awesome Casket 2000</h5>
-						</header>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a mauris pharetra sed tristique mauris lacinia. Morbi nec felis erat. Aenean semper, neque id malesuada feugiat, dolor metus commodo velit, a ullamcorper orci ipsum ut felis. Aliquam elementum dolor at eros interdum ut commodo felis rhoncus. Nam lectus lectus, accumsan id placerat vel, pharetra non tellus. Mauris fermentum pulvinar nibh nec feugiat. Etiam tristique pulvinar eros, id laoreet odio porta a. In ante lorem, elementum et laoreet quis, luctus at dolor.</p>
-
-						<p>Pellentesque at nisi luctus nisl scelerisque egestas quis non neque. Nulla eros leo, placerat vel vestibulum eu, lobortis non augue. Praesent in dolor est, volutpat pellentesque mi. Nullam cursus aliquam posuere. Maecenas dapibus rutrum massa sed viverra. In dapibus erat nec odio posuere quis sodales magna viverra. Nam eleifend congue eleifend. Ut dictum enim vel mi condimentum sit amet vestibulum ligula porta. Vestibulum rhoncus commodo nunc eget condimentum. Nulla urna diam, hendrerit quis cursus vel, placerat non nisl.</p>
+			<section class="product-listing twelvecol last">
+				<figure class="product-image threecol">
+					<img src="/images/caskets/atlantic-white.jpg" alt="atlantic-white">
+				</figure>
+				<section class="product-desc eightcol last">
+					<header class="twelvecol last">
+						<hgroup class="ninecol">
+							<h5 class="product-title">
+								Sterling 18 gauge steel
+							</h5>
+						</hgroup>
+						<hgroup class="threecol last">
+							<h6 class="product-price">$2720</h6>
+						</hgroup>
+					</header>
+					<article class="product-details">
+						<p>Antique White Shaded Silver Rose finish with Pink Crepe interior, also comes in Black Cherry, Empire Blue, Grecian Gold and Storm Blue finish</p>
 					</article>
-					<div class="clear-10"></div>
 				</section>
 			</section>
-			<!-- Casket Two -->
-			<section class="accordion product-listing">
-				<header>
-					<figure class="onecol">
-						<img src="/images/urn.jpg" width="42px" height="42px" />
-					</figure>
-					<hgroup class="tencol">
-						<h2>Another Casket Name</h2>
-					</hgroup>
-					<span class="toggle closed onecol last"></span>
-					<div class="clear-10"></div>
-				</header>
-				<section class="accordion-content">
-					<figure class="fourcol">
-						<img src="/images/urn-large.jpg">
-					</figure>
-					<article class="eightcol last">
-						<header>
-								<h5>The Super Awesome Casket 2000 AGAIN</h5>
-						</header>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a mauris pharetra sed tristique mauris lacinia. Morbi nec felis erat. Aenean semper, neque id malesuada feugiat, dolor metus commodo velit, a ullamcorper orci ipsum ut felis. Aliquam elementum dolor at eros interdum ut commodo felis rhoncus. Nam lectus lectus, accumsan id placerat vel, pharetra non tellus. Mauris fermentum pulvinar nibh nec feugiat. Etiam tristique pulvinar eros, id laoreet odio porta a. In ante lorem, elementum et laoreet quis, luctus at dolor.</p>
-
-						<p>Pellentesque at nisi luctus nisl scelerisque egestas quis non neque. Nulla eros leo, placerat vel vestibulum eu, lobortis non augue. Praesent in dolor est, volutpat pellentesque mi. Nullam cursus aliquam posuere. Maecenas dapibus rutrum massa sed viverra. In dapibus erat nec odio posuere quis sodales magna viverra. Nam eleifend congue eleifend. Ut dictum enim vel mi condimentum sit amet vestibulum ligula porta. Vestibulum rhoncus commodo nunc eget condimentum. Nulla urna diam, hendrerit quis cursus vel, placerat non nisl.</p>
+			<!-- Second -->
+			<section class="product-listing twelvecol last">
+				<figure class="product-image threecol">
+					<img src="/images/urns/etienne-butterfly.png" alt="atlantic-white">
+				</figure>
+				<section class="product-desc eightcol last">
+					<header class="twelvecol last">
+						<hgroup class="ninecol">
+							<h5 class="product-title">
+								Sterling 18 gauge steel
+							</h5>
+						</hgroup>
+						<hgroup class="threecol last">
+							<h6 class="product-price">$2720</h6>
+						</hgroup>
+					</header>
+					<article class="product-details">
+						<p>Antique White Shaded Silver Rose finish with Pink Crepe interior, also comes in Black Cherry, Empire Blue, Grecian Gold and Storm Blue finish</p>
 					</article>
-					<div class="clear-10"></div>
 				</section>
 			</section>
+			<!-- Second -->
+			<section class="product-listing twelvecol last">
+				<figure class="product-image threecol">
+					<img src="/images/urns/classic-bronze.png" alt="atlantic-white">
+				</figure>
+				<section class="product-desc ninecol last">
+					<header class="twelvecol last">
+						<hgroup class="ninecol">
+							<h5 class="product-title">
+								Sterling 18 gauge steel
+							</h5>
+						</hgroup>
+						<hgroup class="threecol last">
+							<h6 class="product-price">$2720</h6>
+						</hgroup>
+					</header>
+					<article class="product-details">
+						<p>Antique White Shaded Silver Rose finish with Pink Crepe interior, also comes in Black Cherry, Empire Blue, Grecian Gold and Storm Blue finish</p>
+					</article>
+				</section>
+			</section>
+			<!-- Second -->
+			<section class="product-listing twelvecol last">
+				<figure class="product-image threecol">
+					<img src="/images/urns/twilight.jpg" alt="atlantic-white">
+				</figure>
+				<section class="product-desc eightcol last">
+					<header class="twelvecol last">
+						<hgroup class="ninecol">
+							<h5 class="product-title">
+								Sterling 18 gauge steel
+							</h5>
+						</hgroup>
+						<hgroup class="threecol last">
+							<h6 class="product-price">$2720</h6>
+						</hgroup>
+					</header>
+					<article class="product-details">
+						<p>Antique White Shaded Silver Rose finish with Pink Crepe interior, also comes in Black Cherry, Empire Blue, Grecian Gold and Storm Blue finish</p>
+					</article>
+				</section>
+			</section>
+			<!-- Second -->
+			<section class="product-listing twelvecol last">
+				<figure class="product-image threecol">
+					<img src="/images/urns/essence-rose.png" alt="atlantic-white">
+				</figure>
+				<section class="product-desc eightcol last">
+					<header class="twelvecol last">
+						<hgroup class="ninecol">
+							<h5 class="product-title">
+								Sterling 18 gauge steel
+							</h5>
+						</hgroup>
+						<hgroup class="threecol last">
+							<h6 class="product-price">$2720</h6>
+						</hgroup>
+					</header>
+					<article class="product-details">
+						<p>Antique White Shaded Silver Rose finish with Pink Crepe interior, also comes in Black Cherry, Empire Blue, Grecian Gold and Storm Blue finish</p>
+					</article>
+				</section>
+			</section>
+			<!-- Second -->
+			<section class="product-listing twelvecol last">
+				<figure class="product-image threecol">
+					<img src="/images/urns/Amethyst.jpg" alt="atlantic-white">
+				</figure>
+				<section class="product-desc eightcol last">
+					<header class="twelvecol last">
+						<hgroup class="ninecol">
+							<h5 class="product-title">
+								Sterling 18 gauge steel
+							</h5>
+						</hgroup>
+						<hgroup class="threecol last">
+							<h6 class="product-price">$2720</h6>
+						</hgroup>
+					</header>
+					<article class="product-details">
+						<p>Antique White Shaded Silver Rose finish with Pink Crepe interior, also comes in Black Cherry, Empire Blue, Grecian Gold and Storm Blue finish</p>
+					</article>
+				</section>
+			</section>
+
 		</section>
-		</section>
+	</section>
 	<section class="clear-15"></section>
 </section>
