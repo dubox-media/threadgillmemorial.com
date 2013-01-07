@@ -40,6 +40,7 @@
 
 .product-listing:nth-child(even) {
     background-color: #fef6eb;
+    color:#111;
 }
 
 .product-title {
@@ -49,10 +50,9 @@
 }
 
 .product-price {
-    font-weight: bolder;
-    color:#333;
-    font-family: arial;
-
+    font-weight: lighter;
+    color:#B57B10;
+    margin-right: 12px;
 }
 
 .product-desc {
