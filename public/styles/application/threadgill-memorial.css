@@ -595,7 +595,7 @@ select {
 }
 
 .sub-content-wrapper {
-    padding:0;
+    padding:0 5px 0 0;
     margin:0;
     height: 400px;
     overflow-y: scroll;
