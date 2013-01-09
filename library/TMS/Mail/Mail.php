@@ -95,23 +95,21 @@ class TMS_Mail_Mail
 	{
 		//Set up smtp params
 		$config = array(
-			'ssl' 			 =>  'tls',
-			'auth'       =>  'plain',
+			'auth'       =>  'login',
 			'username'   =>  'stowell.kt@gmail.com',
-			// 'password'   =>  '6beb5d8b-85fe-4e55-b26e-541967746743',
-			'password' => 'Koohoy0x',
+			'password'   =>  '6beb5d8b-85fe-4e55-b26e-541967746743',
+			// 'password' => 'threadgill',
 			'port'       =>  '587'	
 		);
 
 		//Set up transport
-		$transport = new Zend_Mail_Transport_Smtp('smtp.gmail.com', $config);
+		$transport = new Zend_Mail_Transport_Smtp('smtp.mandrillapp.com', $config);
 
 		try {
 			$this->_mail->send($transport);
 		} catch(Exception $e) {
-			throw new Exception("Error Processing Request", 1, $e);
+			echo "Error Sending mail. If you are seeing this message, please let us know!" . $e->getMessage();
 		}
-
 		return TRUE;
 	}
 }
