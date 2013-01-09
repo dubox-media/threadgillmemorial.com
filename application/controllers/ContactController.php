@@ -15,7 +15,7 @@ class ContactController extends Zend_Controller_Action
 			$subject = 'Contact submission from www.threadgillmemorial.com';
 
 			// Change to deborah for production
-			$to = 'stowell.kt@gmail.com';
+			$to = 'ron@threadgillmemorial.com';
 
 			$body ='<h1>Contact for submission from threadgillmemorial.com</h1>';
 			$body .="\n";
