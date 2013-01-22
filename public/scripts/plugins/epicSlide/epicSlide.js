@@ -357,7 +357,7 @@
 				slide_data.dist = (slide_data.dir == 'top')? '-='+self.h 
 					: (slide_data.dir == 'right')? '+='+self.w 
 						: (slide_data.dir == 'bottom')? '+='+self.h 
-							: (slide_data.dir == 'left')? '-='+self.w 
+							: (slide_data.dir == 'left')? ($.browser.webkit)? '-='+(self.w+2) : '-='+(self.w)
 								: null;
 
 				return slide_data;
