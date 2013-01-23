@@ -19,130 +19,367 @@
 	<section id="form-wrapper" class="ninecol last">
 		<header>
 			<hgroup>
-				<h5>Cremation Authorization</h5>
+				<h5>Cremation and Disposition Authorization</h5>
 			</hgroup>
 		</header>
-		<form id="cremation form" action="/forms/submit-form" method="POST">
-			<ul>
-				<!-- First Row -->
-				<li>
-					<ul>
-						<li id="n-o-d-wrapper"><input type="text" id="n-o-d" name="name" placeholder="Name of Decedent"></li>
-						<li id="gender-wrapper">
-							<select id="gender" name="gender">
-								<option value=" ">SEX</option>
-								<option value="male">Male</option>
-								<option value="female">Female</option>
-							</select>
-						</li>
-						<li id="d-o-b-wrapper">
-							<ul>
-								<li><label for="d-o-b">Date of Birth:</label></li>
-								<li><input type="date" id="d-o-b" name="dob" value="Month/Day/Year"/></li>
+		<section class="sub-content-wrapper twelvecol last">
+			<form id="cremation form" action="/forms/submit-form" method="POST">
+				<!-- Decedent Information -->
+				<fieldset>
+					<header>
+						<h6>Decedent Information:</h6>
+					</header>
+					<!-- First Row -->
+					<ul class="form-row twelvecol last">
+						<li class="twelvecol last">
+							<ul class="twelvecol last">
+								<li class="twocol lbl"><label for="dec_name">Name: *</label></li>
+								<li class="sevencol last"><input name"dec_name" type="text" autofocus></li>
 							</ul>
 						</li>
 					</ul>
-				</li>
-				<!-- Second Row -->
-				<li>
-					<ul>
-						<li id="ssn-wrapper"><input type="text" id="ssn" name="ssn" placeholder="Social Security Number" /></li>
-					</ul>
-				</li>
-				<!-- Third Row -->
-				<li>
-					<ul>
-						<li id="container-wrapper">
-							<ul>
-								<li><label>Select: </label></li>
-								<li class="unchecked"><input type="checkbox" id="container" value="X" name="container"/></li>
-								<li><label for="container">:Casket or Cremation Container</label></li>
-								<li class="unchecked"><input type="checkbox" id="tray" name="tray" value="X" /></li>
-								<li><label>:Combustible Tray - or </label></li>
+					<!-- Second Row -->
+					<ul class="form-row twelvecol last">
+						<li class="twelvecol last">
+							<ul class="twelvecol last">
+								<li class="twocol lbl"><label for="dec_gender">Sex: *</label></li>
+								<li class="fourcol last">
+									<select name"dec_gender" type="text">
+										<option value="M">Male</option>
+										<option value="F">Female</option>
+									</select>
+								</li>
 							</ul>
 						</li>
-						<li id="other-wrapper">
-							<input type="text" placeholder="Other" id="other-container">
+					</ul>
+					<!-- Third Row -->
+					<ul class="form-row twelvecol last">
+						<li class="twelvecol last">
+							<ul class="twelvecol last">
+								<li class="twocol lbl"><label for="dec_dob">Date of Birth: *</label></li>
+								<li class="fourcol last"><input name"dec_dob" type="date"></li>
+							</ul>
 						</li>
 					</ul>
-				</li>
-				<!-- Fourth Row -->
-				<li>
-					<ul>
-						<li id="cremated-name-wrapper"><input type="text" id="cremated-name" placeholder="Cremated remains are to be sent to (Name)" /></li>
-					</ul>
-				</li>
-				<!-- Fifth Row -->
-				<li>
-					<ul>
-						<li class="cremated-address-wrapper">
-							<input type="text" id="cremated-address" placeholder="Address" />
-						</li>
-						<li class="cremated-city-wrapper">
-							<input type="text" placeholder="City, State, Zip" id="cremated-city" />
+					<!-- Fourth Row -->
+					<ul class="form-row twelvecol last">
+						<li class="twelvecol last">
+							<ul class="twelvecol last">
+								<li class="twocol lbl"><label for="dec_dod">Date of Death: *</label></li>
+								<li class="fourcol last"><input name"dec_dod" type="date"></li>
+							</ul>
 						</li>
 					</ul>
-				</li>
-				<!-- Sixth Row -->
-				<li>
-					<ul>
-						<li id="cremated-will-call-wrapper">
-							<input type="text" id="cremated-will-call" placeholder="Cremated remains will be called for by (Name)" />
-						</li>
-						<li id="cremated-will-call-date-wrapper">
-							<input type="date" id="cremated-will-call-date" />
+					<!-- Fifth Row -->
+					<ul class="form-row twelvecol last">
+						<li class="twelvecol">
+							<ul class="twelvecol last">
+								<li class="twocol lbl"><label for="dec_ssn">SSN: *</label></li>
+								<li class="fourcol last"><input name"dec_ssn" type="text"></li>
+							</ul>
 						</li>
 					</ul>
-				</li>
-				<!-- Seventh Row -->
-				<li>
-					<ul>
-						<li id="cremated-rel-wrapper">
-							<input type="text" id="cremated-rel" placeholder="Relationship" />
+				</fieldset>
+				<!-- Disposition Information -->
+				<fieldset>
+					<header>
+						<h6>Disposition Information:</h6>
+					</header>
+					<!-- First Row -->
+					<ul class="form-row twelvecol last">
+						<li class="twelvecol last">
+							<ul class="twelvecol last">
+								<li class="threecol lbl"><label for="crem_container_type">Type of Cremation Container: *</label></li>
+								<li class="fourcol last">
+									<select name="crem_container_type">
+										<option value="X">Combustible Tray</option>
+										<option value="X">Other</option>
+									</select>
+								</li>
+							</ul>
 						</li>
 					</ul>
-				</li>
-				<!-- Eighth Row -->
-				<li>
-					<ul>
-						<li class="cremated-address-wrapper">
-							<input type="text" id="cremated-address" placeholder="Address" />
-						</li>
-						<li class="cremated-city-wrapper">
-							<input type="text" placeholder="City, State, Zip" id="cremated-city" />
-						</li>
-					</ul>
-				</li>
-				<!-- Ninth Row -->
-				<li>
-					<ul>
-						<li id="cremated-tel-wrapper">
-							<input type="phone" id="cremated-tel" placeholder="Telephone Number" />
+					<!-- Second Row -->
+					<ul class="form-row twelvecol last">
+						<li class="twelvecol last">
+							<ul class="twelvecol last">
+								<li class="threecol"></li>
+								<li class="twocol last lbl"><label for="crem_container_type_other">Other Container: *</label></li>
+								<li class="sixcol last other"><input type="text" name="crem_container_type_other"></li>
+							</ul>
 						</li>
 					</ul>
-				</li>
-				<!-- Tenth Row -->
-				<li>
-					<ul>
-						<li class="wrapper-53">
-							<input type="text" id="witness" name="witness" placeholder="Witness (Name)" />
-						</li>
-						<li class="wrapper-30">
-							<input type="date" id="witness-date" name="witness_date" />
-						</li>
-					</ul>
-				</li>
-				<!-- 11th Row -->
-				<li>
-					<ul>
-						<li id="submit-wrapper">
-							<input type="hidden" value="cremation" name="form_name">
-							<input type="submit" id="cremation-submit" value="Submit Form" />
+					<!-- First Row -->
+					<ul class="form-row twelvecol last">
+						<li class="twelvecol last">
+							<ul class="twelvecol last">
+								<li class="threecol lbl"><label for="crem_remains_container_type">Type of container requested for cremated remains: *</label></li>
+								<li class="fourcol last">
+									<select name="crem_remaains_container_type">
+										<option value="X">Plastic Temporary Urn</option>
+										<option value="X">Other</option>
+									</select>
+								</li>
+							</ul>
 						</li>
 					</ul>
-				</li>
-			</ul>
-		</form>
+					<!-- Second Row -->
+					<ul class="form-row twelvecol last">
+						<li class="twelvecol last">
+							<ul class="twelvecol last">
+								<li class="threecol"></li>
+								<li class="twocol last lbl"><label for="crem_remains_container_type_other">Other Container: *</label></li>
+								<li class="sixcol last other"><input type="text" name="crem_remains_container_type_other"></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- Third Row -->
+					<ul class="form-row twelvecol last">
+						<li class="twelvecol last">
+							<ul class="twelvecol last">
+								<li class="threecol lbl"><label for="crem_property">Property to be cremated:</label></li>
+								<li class="sixcol"><input type="text" name="crem_property"></li>
+								<li class="onecol last lbl add_crem_prop"><img src="/images/grey_plus.png"></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- Fourth Row -->
+					<ul class="form-row twelvecol last">
+						<li class="twelvecol last">
+							<ul class="twelvecol last">
+								<li class="threecol"></li>
+								<li class="sixcol"><input type="text" name="crem_property"></li>
+								<li class="onecol last lbl add_crem_prop"><img src="/images/grey_plus.png"></li>
+								<li class="onecol last lbl del_crem_prop"><img src="/images/grey_minus.png"></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- Addt'l Row -->
+					<ul class="form-row twelvecol last">
+						<li class="twelvecol last">
+							<ul class="twelvecol last">
+								<li class="threecol"></li>
+								<li class="sixcol"><input type="text" name="crem_property"></li>
+								<!-- <li class="twocol last lbl"><label class="del_crem_prop">Remove This Item</label></li> -->
+								<li class="onecol last lbl add_crem_prop"><img src="/images/grey_plus.png"></li>
+								<li class="onecol last lbl del_crem_prop"><img src="/images/grey_minus.png"></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- Fifth Row -->
+					<ul class="form-row twelvecol last">
+						<li class="twelvecol last">
+							<ul class="twelvecol last">
+								<li class="threecol lbl"><label for="crem_property_location">Location of Property:</label></li>
+								<li class="fourcol last">
+									<select name="crem_property_location">
+										<option value="X">On or with the remains</option>
+										<option value="X">Secure Storage with First Call Plus</option>
+										<option value="X">Other</option>
+									</select>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<!-- Sixth Row -->
+					<ul class="form-row twelvecol last">
+						<li class="twelvecol last">
+							<ul class="twelvecol last">
+								<li class="threecol"></li>
+								<li class="twocol last lbl"><label for="crem_property_location_other">Other Location: *</label></li>
+								<li class="sixcol last other"><input type="text" name="crem_property_location_other"></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- Seventh Row -->
+					<ul class="form-row twelvecol last">
+						<li class="twelvecol last">
+							<ul class="twelvecol last">
+								<li class="threecol lbl"><label for="crem_remains_pickup">Cremated remains will be picked up by: *</label></li>
+								<li class="sixcol last"><input type="text" name="crem_remains_pickup"></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- Eigth Row -->
+					<ul class="form-row twelvecol last">
+						<li class="twelvecol last">
+							<ul class="twelvecol last">
+								<li class="threecol lbl"><label for="crem_remains_shipped_to">Cremated remains will be shipped to: *</label></li>
+								<li class="sixcol last"><input type="text" name="crem_remains_shipped_to"></li>
+							</ul>
+						</li>
+					</ul>
+				</fieldset>
+				<!-- Authorization Information -->
+				<fieldset>
+					<header>
+						<h6>Authorization:</h6>
+					</header>
+					<section class="onecol"></section>
+					<fieldset class="elevencol last">
+						<header>
+							<h6>Authorized Agent or Next of Kin:</h6>
+						</header>
+						<!-- First Row -->
+						<ul class="form-row twelvecol last">
+							<li class="twelvecol last">
+								<ul class="twelvecol last">
+									<li class="threecol lbl"><label for="authorized_agent_name">Name: *</label></li>
+									<li class="sixcol last"><input type="text" name="authorized_agent_name"></li>
+								</ul>
+							</li>
+						</ul>
+						<!-- First Row -->
+						<ul class="form-row twelvecol last">
+							<li class="twelvecol last">
+								<ul class="twelvecol last">
+									<li class="threecol lbl"><label for="authorized_agent_rel">Relationship: *</label></li>
+									<li class="sixcol last"><input type="text" name="authorized_agent_rel"></li>
+								</ul>
+							</li>
+						</ul>
+						<!-- First Row -->
+						<ul class="form-row twelvecol last">
+							<li class="twelvecol last">
+								<ul class="twelvecol last">
+									<li class="threecol lbl"><label for="authorized_agent_address">Address (Street): *</label></li>
+									<li class="sixcol last"><input type="text" name="authorized_agent_address"></li>
+								</ul>
+							</li>
+						</ul>
+						<!-- First Row -->
+						<ul class="form-row twelvecol last">
+							<li class="twelvecol last">
+								<ul class="twelvecol last">
+									<li class="threecol lbl"><label for="authorized_agent_city">City: *</label></li>
+									<li class="threecol last"><input type="text" name="authorized_agent_city"></li>
+								</ul>
+							</li>
+						</ul>
+						<!-- First Row -->
+						<ul class="form-row twelvecol last">
+							<li class="twelvecol last">
+								<ul class="twelvecol last">
+									<li class="threecol lbl"><label for="authorized_agent_state">State: *</label></li>
+									<li class="threecol last"><input type="text" name="authorized_agent_state"></li>
+								</ul>
+							</li>
+						</ul>
+						<!-- First Row -->
+						<ul class="form-row twelvecol last">
+							<li class="twelvecol last">
+								<ul class="twelvecol last">
+									<li class="threecol lbl"><label for="authorized_agent_zip">Zip code: *</label></li>
+									<li class="threecol last"><input type="text" name="authorized_agent_zip"></li>
+								</ul>
+							</li>
+						</ul>
+						<!-- First Row -->
+						<ul class="form-row twelvecol last">
+							<li class="twelvecol last">
+								<ul class="twelvecol last">
+									<li class="threecol lbl"><label for="authorized_agent_phone">Phone: *</label></li>
+									<li class="threecol last"><input type="phone" name="authorized_agent_phone"></li>
+								</ul>
+							</li>
+						</ul>
+						<!-- First Row -->
+						<ul class="form-row twelvecol last">
+							<li class="twelvecol last">
+								<ul class="twelvecol last">
+									<li class="threecol lbl"></li>
+									<li class="twocol last lbl"><label>Add another</label></li>
+									<li class="onecol last add_crem_prop lbl"><img src="/images/grey_plus.png" alt="Add another"></li>
+								</ul>
+							</li>
+						</ul>
+					</fieldset>
+					<section class="onecol"></section>
+					<fieldset class="elevencol last">
+						<header>
+							<h6 class="elevencol">Mechanical Devices and Implants:</h6>
+							<img src="/images/info.png" class="info" alt="info">
+							<section class="clear-1"></section>
+						</header>
+						<!-- First Row -->
+						<ul class="form-row twelvecol last">
+							<li class="twelvecol last">
+								<ul class="twelvecol last">
+									<li class="sixcol lbl"><label for="crem_device">I HEREBY CERTIFY THAT REMAINS OF THE DECEDENT ______ CONTAIN ANY TYPE OF MECHANICAL OR RADIOACTIVE DEVICE. *</label></li>
+									<li class="threecol last">
+										<select name="crem_device">
+											<option value="X">Does</option>
+											<option value="X">Does Not</option>
+										</select>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<!-- First Row -->
+						<ul class="form-row twelvecol last">
+							<li class="twelvecol last">
+								<ul class="twelvecol last">
+									<li class="threecol lbl"><label for="crem_device_desc">Device Description: *</label></li>
+									<li class="sixcol"><input type="text" name="crem_device_desc"</li>
+									<li class="onecol last add_crem_prop lbl"><img src="/images/grey_plus.png" alt="Add another"></li>
+								</ul>
+							</li>
+						</ul>
+						<!-- Addt'l Row -->
+						<ul class="form-row twelvecol last">
+							<li class="twelvecol last">
+								<ul class="twelvecol last">
+									<li class="threecol"></li>
+									<li class="sixcol"><input type="text" name="crem_device_desc"></li>
+									<!-- <li class="twocol last lbl"><label class="del_crem_prop">Remove This Item</label></li> -->
+									<li class="onecol last lbl add_crem_prop"><img src="/images/grey_plus.png"></li>
+									<li class="onecol last lbl del_crem_prop"><img src="/images/grey_minus.png"></li>
+								</ul>
+							</li>
+						</ul>
+						<!-- First Row -->
+						<ul class="form-row twelvecol last">
+							<li class="twelvecol last">
+								<ul class="twelvecol last">
+									<li class="threecol lbl"><label for="crem_device_sign">Authorized Sign: *</label></li>
+									<li class="sixcol"><input type="text" name="crem_device_sign"</li>
+								</ul>
+							</li>
+						</ul>
+					</fieldset>
+					<!-- Cremation Auth -->
+					<section class="onecol"></section>
+					<fieldset class="elevencol last">
+						<header>
+							<h6 class="elevencol">Cremation and Disposition Authorization:</h6>
+							<img src="/images/info.png" class="info" alt="info">
+							<section class="clear-1"></section>
+						</header>
+						<!-- First Row -->
+						<ul class="form-row twelvecol last">
+							<li class="twelvecol last">
+								<ul class="twelvecol last">
+									<li>
+										<p>
+											
+										</p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<!-- First Row -->
+						<ul class="form-row twelvecol last">
+							<li class="twelvecol last">
+								<ul class="twelvecol last">
+									<li class="threecol lbl"><label for="crem_auth_sign">Authorized Sign: *</label></li>
+									<li class="sixcol"><input type="text" name="crem_auth_sign"</li>
+								</ul>
+							</li>
+						</ul>
+					</fieldset>
+				</fieldset>
+			</form>
+		</section>
 	</section>
 	<section class="clear-15"></section>
 </section>

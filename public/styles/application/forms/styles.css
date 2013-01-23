@@ -74,138 +74,35 @@
  * -------------------
  */
 
-#forms-menu {
-	text-align: center;
-	margin: 0 auto 0 auto;
-}
-
-#forms-menu-list {
-	width: 100%;
-	text-align: center;
-	margin: 0 auto 0 auto;
-}
-
-.form-item-row {
-	width: auto;
-	display: inline-block;
-	text-align: center;
-	margin: 2% 0 2% auto;
-	float: none;
-}
-
-.form-item {
-	height:150px;
-	width: 260px;
-	margin: 0 15px;
-	display: inline-block;
-	border: 4px solid #ccc;
-	background-color: #333;
-	overflow: hidden;
-	box-shadow: 5px 5px 3px #333;
-}
-
-.form-item:hover {
-	border: 4px solid #E8CB95;
-}
-
-.form-item-caption {
-	background-color: rgba(0, 0 ,0 , .8);
-	color: white;
-	height:auto;
-	padding:3px 0;
-	position: relative;
-}
 
 form {
 	margin: 10px 0;
 }
 /**
  * -------------------
- * The Form
+ * Cremation
  * -------------------
  */
+.add_crem_prop,
+.del_crem_prop {
+	cursor: pointer;
+}
 
-/* These are the form 'rows'*/
+.add_crem_prop:hover,
+.del_crem_prop:hover {
+	text-decoration: underline;
+}
 
-
+.other {
+	margin-bottom: 20px;
+}
 /**
  * ----------------------
  * Specific Form Elements
  * ----------------------
  */
 
-#n-o-d-wrapper {
-	width:53%;
-}
 
-#gender-wrapper {
-	width: 10%;
-}
-
-#d-o-b-wrapper {
-	width:32.7%;
-}
-
-#d-o-b-wrapper ul li:first-child {
-	width:30%;
-}
-
-#d-o-b-wrapper ul li:first-child label {
-	font-size: 11px !important;
-}
-
-#d-o-b-wrapper ul li:last-child {
-	width:60%;
-}
-
-#ssn-wrapper {
-	width:45%;
-	margin:0;
-}
-
-#other-wrapper {
-	width:30%;
-	text-align: right;
-}
-
-#cremated-name-wrapper {
-	width:55%;
-	margin:0;
-}
-
-.cremated-address-wrapper {
-	width:60%;
-}
-
-.cremated-city-wrapper {
-	width:34%;
-}
-
-#cremated-will-call-wrapper {
-	width: 55%;
-}
-
-#cremated-will-call-date-wrapper {
-	width: 43%;
-}
-
-#cremated-rel-wrapper {
-	margin:0;
-	width: 50%;
-}
-
-#cremated-tel-wrapper {
-	width:39%;
-	margin:0;
-}
-
-#witness-wrapper {
-	width: 55%;
-}
-
-#witness-date-wrapper {
-	width: 43%;
-}
 /**********************************************************************************************************************************************************
  * FOOTER
  *********************************************************************************************************************************************************/
