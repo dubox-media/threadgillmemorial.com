@@ -94,7 +94,7 @@
 			var self = this;
 
 			// Accordion
-			$('.accordion>header').live('click', function(e) {
+			$('.accordion>header').bind('click', function(e) {
 				window.TM._UI.accordion(this);
 			});
 		}

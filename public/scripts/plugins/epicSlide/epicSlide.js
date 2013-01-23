@@ -79,6 +79,7 @@
 		this.loop 	= this.options.loop; // Loop slide show
 		this.itvl 	= this.options.interval; // Interval
 		this.slds 	= this.options.slides; // Slides object
+		this.timer; // Set timeout access
 
 		// DOM components
 		this.parent = $(root);
@@ -322,7 +323,7 @@
 				var self = this;
 
 				// Stop events
-				$(this._eS.sld).on('click', 'img', function() {
+				$(this._eS.sld).bind('click', function() {
 					self._animation_controls.stop();
 				});
 			},
@@ -357,7 +358,7 @@
 				slide_data.dist = (slide_data.dir == 'top')? '-='+self.h 
 					: (slide_data.dir == 'right')? '+='+self.w 
 						: (slide_data.dir == 'bottom')? '+='+self.h 
-							: (slide_data.dir == 'left')? ($.browser.webkit)? '-='+(self.w+2) : '-='+(self.w)
+							: (slide_data.dir == 'left')? '-='+(self.w)
 								: null;
 
 				return slide_data;
@@ -414,12 +415,11 @@
 			 *				object and thus global objects need to passed in accordingly.
 			 */
 			animate_slides: function(_this, _eS) {
-				var self = _this;		
-
-				var elems = $(_eS.sld);
+				var self = _this,
+						elems = $(_eS.sld);
 
 				var animate = function() {
-					setTimeout(function() {
+					epicSlide.timer = setTimeout(function() {
 						// Get the first element in the stack
 						var elem = $(elems).get(0);
 						// If the specified index actually returns something.
@@ -493,7 +493,9 @@
 			 */
 			_animation_controls: {
 				stop: function() {
-					$(this._eS.sld).stop();
+					var self = epicSlide;
+					console.log(self.timer)
+					clearTimeout(self.timer);
 				}
 			}
 		}

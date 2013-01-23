@@ -175,11 +175,11 @@
 			var self = this;
 
 			// checkboxes
-			$('.unchecked, .checked').live('click', function(e) {
+			$('.unchecked, .checked').bind('click', function(e) {
 				self._UI._checkbox.init(this, $('#container-wrapper'));
 			});
 
-			$('.opened, .closed').live('click', function() {
+			$('.opened, .closed').bind('click', function() {
 				self._UI.accordion(this);
 			});
 		}
