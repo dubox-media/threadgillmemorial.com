@@ -25,31 +25,27 @@
  *--------------------------
  */
 #intro-content {
+	
 	height:100%;
 	width:100%;
 	margin: 0 auto;
 	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 #slide-show {
 	margin: 0 auto;
 	text-align: center;
 	position: absolute;
-}
-
-#slide-show figure {
-	width:auto;
-	height: auto;
-	border: 4px solid #ffecbf;
-	background-color: white;
-	margin: 0 auto;
-	padding:4px;
-	text-align: center;
+	top:0;
+	left:0;
 }
 
 #slide-show img {
-	width:100%;
-	height: auto;
+	width:1140px;
+	height: 418;
 	text-align: center;
 	margin: 0 auto;
 }

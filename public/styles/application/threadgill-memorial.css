@@ -47,6 +47,9 @@ body {
     background-size: cover;
     height: 100%;
     width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
 }
 
 body img {
@@ -613,7 +616,7 @@ select {
 
 #site-content {
     height: auto;
-    min-height: 400px;
+    min-height: 425px;
     text-align: center;
     margin: 10px auto;
     /*padding: 10px 5px;*/

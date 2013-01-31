@@ -138,6 +138,7 @@
 						},
 						slide_3: {
 							image: '/images/slide_3.png',
+							direction: 'right',
 							caption: ''
 						},
 						slide_4: {
