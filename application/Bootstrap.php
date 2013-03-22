@@ -68,11 +68,12 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		$view->headLink()->appendStylesheet('/styles/application/threadgill-memorial.css');
 
 		// Scripts
-		$view->headScript()->appendFile('http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js')
+		$view->headScript()->appendFile('/scripts/libs/jquery/jquery-1.7.1.js')
 			->headScript()->appendFile('/scripts/libs/modernizr/modernizr.js')
 			->headScript()->appendFile('/scripts/libs/1140/1140.js')
 			->headScript()->appendFile('/scripts/plugins/epicSlide/epicSlide.js')
 			->headScript()->appendFile('/scripts/plugins/mousewheel/jquery.mousewheel.js')
+			->headScript()->appendFile('/scripts/plugins/spin/spin.js')
 			->headScript()->appendFile('/scripts/application/threadgill-memorial.js');
 	}
 }
