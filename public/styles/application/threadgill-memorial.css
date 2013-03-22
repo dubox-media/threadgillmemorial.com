@@ -613,10 +613,10 @@ select {
 
 #site-content {
     height: auto;
-    min-height: 400px;
+    min-height: 425px;
     text-align: center;
     margin: 10px auto;
-    /*padding: 10px 5px;*/
+    padding: 10px 5px;
 }
 
 .page-content {

@@ -129,7 +129,8 @@
 					slides: {
 						slide_1: {
 							image: '/images/slide_1.png',
-							caption: ''
+							caption: '',
+							direction: 'bottom'
 						},
 						slide_2: {
 							image: '/images/slide_2.png',
@@ -138,21 +139,23 @@
 						},
 						slide_3: {
 							image: '/images/slide_3.png',
-							caption: ''
+							caption: '',
+							direction: 'bottom'
 						},
 						slide_4: {
 							image: '/images/slide_4.png',
 							caption: '',
-							direction: 'top'
+							direction: 'bottom'
 						},
 						slide_5: {
 							image: '/images/slide_5.png',
-							direction: 'right',
-							caption: ''
+							caption: '',
+							direction: 'bottom'
 						},
 						slide_6: {
 							image: '/images/slide_6.png',
-							caption: ''
+							caption: '',
+							direction: 'bottom'
 						}
 					}
 				});
@@ -175,11 +178,11 @@
 			var self = this;
 
 			// checkboxes
-			$('.unchecked, .checked').live('click', function(e) {
+			$('.unchecked, .checked').bind('click', function(e) {
 				self._UI._checkbox.init(this, $('#container-wrapper'));
 			});
 
-			$('.opened, .closed').live('click', function() {
+			$('.opened, .closed').bind('click', function() {
 				self._UI.accordion(this);
 			});
 		}
