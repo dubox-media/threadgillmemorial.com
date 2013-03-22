@@ -1,0 +1,92 @@
+<!-- Forms Presentation -->
+<section id="forms-content" class="page-content">
+	<header>
+		<h1>Products Administration</h1>
+	</header>
+	<section class="clear-15"></section>
+	<section class="threecol">
+		<nav id="forms-nav" class="page-menu">
+			<hgroup>
+				<h6>--- Welcome, <b><? echo $this->identity->name; ?></b> ---</h6>
+			</hgroup>
+			<ul>
+				<li><a href="/admin">Site Stats</a></li>
+				<li><a href="/admin/products">Products Administration</a></li>
+				<li><a href="/admin/maintenance">Site Maintenance</a></li>
+				<li><a href="/admin/logout">Logout</a></li>
+			</ul>
+		</nav>
+	</section>
+	<section id="form-wrapper" class="ninecol last">
+		<header>
+			<hgroup>
+				<h5>Actions</h5>
+			</hgroup>
+		</header>
+		<section class="sub-content-wrapper twelvecol last">
+			<form id="add-products-form" action="/admin/products/add" method="POST" enctype="multipart/form-data">
+				<!-- Decedent Information -->
+				<fieldset class="add-products">
+					<header>
+						<h6>Add a Product:</h6>
+					</header>
+					<section class="twelvecol product-row last">
+						<section class="onecol"></section>
+						<section class="elevencol last">
+							<header class="twelvecol last">
+								<h6 class="eightcol">Product Row: </h6>
+								<hgroup class="fourcol last">
+									<h6 class="ninecol">Add Another Product</h6>
+									<img class="add-row" src="/images/grey_plus.png" alt="Add another" />
+								</hgroup>
+							</header>
+							<!-- First Row -->
+							<ul class="form-row twelvecol last">
+								<li class="threecol lbl"><label for="product-name">Product Name (title): </label></li>
+								<li class="threecol"><input type="text" name="product-name"></li>
+								<li class="twocol lbl"><label for="product-type">Product type: </label></li>
+								<li class="twocol">
+									<select name="product-type">
+										<option name="urn" value="urns">Urn</option>
+										<option name="Casket" value="caskets">Casket</option>
+									</select>
+								</li>
+							</ul>
+							<!-- Second Row -->
+							<ul class="form-row twelvecol last">
+								<li class="threecol lbl"><label for="product-price">Product Price: </label></li>
+								<li class="threecol"><input type="text" name="product-price"></li>
+								<li class="twocol lbl"><label for="product-visibility">Product Visible to Public? : </label></li>
+								<li class="twocol"><input type="checkbox" name="product-visibility"></li>
+							</ul>
+							<!-- Third Row -->
+							<ul class="form-row twelvecol last">
+								<li class="threecol lbl"><label for="product-photo">Product Photo: </label></li>
+								<li class="threecol"><input type="file" name="product-photo"></li>
+							</ul>
+							<!-- Third Row -->
+							<ul class="form-row twelvecol last">
+								<li class="threecol lbl"><label for="product-desc">Product Description: </label></li>
+								<li class="eightcol last"><textarea type="file" name="product-desc"></textarea></li>
+							</ul>
+						</section>
+					</section>
+				</fieldset>
+				<span class="submit products-submit">Add Product(s)</span> 
+			</form>
+			<form id="edit-items-form" action="/admin/products/edit" method="POST">
+				<!-- Decedent Information -->
+				<fieldset>
+					<header>
+						<h6>Edit Products:</h6>
+					</header>
+					<section class="twelvecol last">
+						<?php echo $this->partialLoop('partials/_products.phtml', $this->products); ?>
+					</section>
+				</fieldset>
+				<span class="submit products-edit-submit">Submit Changes</span> 
+			</form>
+		</section>
+	</section>
+	<section class="clear-15"></section>
+</section>

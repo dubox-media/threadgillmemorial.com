@@ -1,0 +1,70 @@
+<section class="elevencol product-edit-row accordion">
+	<header class="open">
+		<hgroup>
+			<h2 class=""><?php echo $this->name; ?></h2>
+			<ul>
+				<li>Delete? </li>
+				<li><input type="checkbox" name="product-edit-delete"></li>
+			</ul>
+			<?php if($this->id == 1): ?>
+			<span class="icon icon-minus"></span>
+			<?php else : ?>
+			<span class="icon icon-plus"></span>
+			<?php endif; ?>
+		</hgroup>
+	</header>
+	<section class="clear-1"></section>
+<section class="accordion-content">
+	<ul class="twelvecol">
+	<li><input type="hidden" value="<?php echo $this->id; ?>"></li>
+	<!-- price -->
+	<li class="twocol">
+		<ul>
+			<li>Price:</li>
+			<li><input type="text" name="product-edit-price" value="<?php echo $this->price; ?>"></li>
+		</ul>
+	</li>
+	<!-- type -->
+	<li class="twocol">
+		<ul>
+			<li>Type:</li>
+			<li>
+				<select name="product-edit-type">
+					<?php if($this->type == 'urns'): ?>
+					<option value="urns" selected>Urn</option>
+					<option value="caskets">Casket</option>
+					<?php else :  ?>
+					<option value="caskets" selected>Casket</option>
+					<option value="urns">Urn</option>
+					<?php endif; ?>
+				</select>
+			</li>
+		</ul>
+	</li>
+	<!-- isVisible -->
+	<li class="onecol">
+		<ul>
+			<li>Visible:</li>
+			<?php if($this->is_visible == 1): ?>
+			<li><input type="checkbox" name="product-edit-visibility" checked="true"></li>
+			<?php else : ?>
+			<li><input type="checkbox" name="product-edit-visibility"></li>
+			<?php endif; ?>
+		</ul>
+	</li>
+	<!-- Photo -->
+	<li class="sixcol last">
+		<ul>
+			<li>Photo:</li>
+			<li><input type="text" title="<?php echo $this->photo_name; ?>" value="<?php echo $this->photo_name; ?>" readonly></li>
+			<li><input type="file" name="product-edit-photo"></li>
+		</ul>
+	</li>
+</ul>
+<ul class="twelvecol">
+	<li>Description</li>
+	<li class="elevencol"><textarea><?php echo $this->description; ?></textarea></li>
+</ul>
+<section class="clear-1"></section>
+</section>
+</section>

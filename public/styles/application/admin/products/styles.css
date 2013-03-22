@@ -1,0 +1,106 @@
+.product-row .form-row {
+	padding: 0 5px;
+}
+
+.product-row:nth-child(odd) section.elevencol {
+	background-color: #fef6eb;
+}
+
+.product-edit-row {
+	margin:7px 0;
+}
+
+#edit-items-form .product-edit-row>header {
+	background-color: #fef6eb;
+	margin:0;
+	display: table;
+	height: 34px;
+	border: 1px ridge #fff;
+}
+
+#edit-items-form .product-edit-row>header.to-delete {
+	border: 1px ridge red;
+}
+
+.product-edit-row>header hgroup {
+	padding:5px;
+	color: #333;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.product-edit-row>header hgroup h2 {
+	width:85%;
+	line-height: 7px;
+}
+
+.product-edit-row>header hgroup span {
+	font-size: 12px;
+}
+
+.product-edit-row>header hgroup h2, 
+.product-edit-row>header hgroup span,
+.product-edit-row>header hgroup ul {
+	display: inline-block;
+}
+
+.product-edit-row>header hgroup ul {
+ 	width:10%;
+ 	position: relative;
+ 	top:5px;
+}
+
+.product-edit-row>header hgroup ul li {
+	display: inline-block;
+	padding:0;
+	margin: 0 3px;
+	height:21px;
+}
+
+.product-edit-row>header hgroup ul li:first-child {
+	position: relative; top:-4px;
+}
+
+.product-edit-row ul>li{
+	padding:5px 0 5px 5px;
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
+.product-edit-row  ul>li:first-child {
+	text-align: left;
+}
+
+.product-edit-row .accordion-content {
+	border-right: 1px solid #b57b10;
+	border-left: 1px solid #b57b10;
+	border-bottom: 1px solid #b57b10;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+.accordion:not(:first-child) .accordion-content {
+    display: none;
+}
+
+.product-edit-row>header hgroup .icon {
+	width: 17px;
+	height:15px;
+	position: relative;
+	top:-5px;
+	left:13px;
+	box-shadow: 2px 2px 2px #333;
+	cursor: pointer;
+}
+
+.product-edit-row>header hgroup .icon:active {
+	box-shadow: 2px 2px 2px #999;
+}
+
+.product-edit-row>header hgroup .icon-minus {
+	background-image: url(/images/minus.png);
+}
+
+.product-edit-row>header hgroup .icon-plus {
+	background-image: url(/images/plus.png);
+}
