@@ -19,7 +19,7 @@
  *
  *
  */
-(function (global) {
+(function (window) {
 	/**
 	 * -------------------------------
 	 * Threadgill_Memorial CONSTRUCTOR
@@ -62,6 +62,51 @@
 			
 		},
 		_UI: {
+			_loader: {
+				init: function(action) {
+					action = action || false;
+
+					this.loader = $('#loader');
+
+					this.opts = {
+					  lines: 13, // The number of lines to draw
+					  length: 7, // The length of each line
+					  width: 4, // The line thickness
+					  radius: 10, // The radius of the inner circle
+					  corners: 1, // Corner roundness (0..1)
+					  rotate: 0, // The rotation offset
+					  color: '#fff', // #rgb or #rrggbb
+					  speed: 1, // Rounds per second
+					  trail: 60, // Afterglow percentage
+					  shadow: false, // Whether to render a shadow
+					  hwaccel: false, // Whether to use hardware acceleration
+					  className: 'spinner', // The CSS class to assign to the spinner
+					  zIndex: 2e9, // The z-index (defaults to 2000000000)
+					  top: 'auto', // Top position relative to parent in px
+					  left: 'auto' // Left position relative to parent in px
+					};
+
+					this.target = document.getElementById('loader-wrapper');
+					console.log(this.target);
+					this.spinner = new Spinner(this.opts).spin(this.target);
+
+					(this[action])? this[action]() : $.noop;
+				},
+				show: function() {
+					this.loader.fadeIn(400, function() {
+						// stuff
+					});
+				},
+				hide: function() {
+					var self = this;
+
+					setTimeout(function() {
+						self.loader.fadeOut(400, function() {
+
+						});
+					}, 1000)
+				}
+			},
 			accordion: function(elem) {
 				var self = window.TM;
 
@@ -184,8 +229,18 @@
 			});
 		}
 	}
+
+	/********************************************************************************************************************************************************
+ 	* API LAYER																																																																							*
+ 	*********************************************************************************************************************************************************/
+
+ 	Threadgill_Memorial.prototype.loader = function(action) {
+ 		return Threadgill_Memorial.prototype._UI._loader.init(action);
+ 	}
+
 	// Instantiate the local object and push it to the window object
 	window.TM = new Threadgill_Memorial();
+
 })(window);
 
 
