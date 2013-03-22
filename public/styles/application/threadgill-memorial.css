@@ -264,7 +264,7 @@ input[type="checkbox"] {
     height:21px;
     border: 1px solid #e7e7e7;
     border-radius: 6px;
-    display:none;
+    /*display:none;*/
     /*background: url(/images/checkbox-unchecked.png);*/
 }
 
@@ -287,7 +287,51 @@ textarea {
     font-size: 14px;
     font-size: 1.4rem;
     padding:5px;
+    min-height: 75px;
     outline: none;
+    width:100%;
+}
+
+span.submit {
+    padding:5px 9px;
+    font-size: 12px;
+    font-size: 1.2rem;
+    border:2px ridge #b57b10;
+    border-radius: 4px;
+    text-align: center;
+    cursor:pointer;
+
+    background-image: linear-gradient(bottom, rgb(253,245,232) 16%, rgb(255,255,255) 59%, rgb(255,255,255) 80%);
+    background-image: -o-linear-gradient(bottom, rgb(253,245,232) 16%, rgb(255,255,255) 59%, rgb(255,255,255) 80%);
+    background-image: -moz-linear-gradient(bottom, rgb(253,245,232) 16%, rgb(255,255,255) 59%, rgb(255,255,255) 80%);
+    background-image: -webkit-linear-gradient(bottom, rgb(253,245,232) 16%, rgb(255,255,255) 59%, rgb(255,255,255) 80%);
+    background-image: -ms-linear-gradient(bottom, rgb(253,245,232) 16%, rgb(255,255,255) 59%, rgb(255,255,255) 80%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.16, rgb(253,245,232)),
+        color-stop(0.59, rgb(255,255,255)),
+        color-stop(0.8, rgb(255,255,255))
+    );
+}
+
+span.submit:hover {
+    background-image: linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 0%, rgb(253,245,232) 79%);
+    background-image: -o-linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 0%, rgb(253,245,232) 79%);
+    background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 0%, rgb(253,245,232) 79%);
+    background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 0%, rgb(253,245,232) 79%);
+    background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 0%, rgb(253,245,232) 79%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.45, rgb(255,255,255)),
+        color-stop(0, rgb(255,255,255)),
+        color-stop(0.79, rgb(253,245,232))
+    );  
 }
 
 .unchecked {
@@ -319,6 +363,10 @@ label {
     font-size: 15px;
     text-align: left;
     padding:0;
+}
+
+.lbl {
+   text-align: left; 
 }
 
 fieldset {
@@ -772,5 +820,41 @@ footer .accordion-content p {
     font-size: 1.4rem;
 }
 /**********************************************************************************************************************************************************
- 
+ LOADER
  *********************************************************************************************************************************************************/
+
+ #loader {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: none;
+ }
+
+ #loader>section {
+    width: 100%;
+    height: 100%;
+    display: table;
+ }
+
+ #loader>section>section {
+    width:100%;
+    text-align: center;
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+ }
+
+ #loader #loader-wrapper {
+    width:100%;
+    text-align: center;
+    padding:50px 0;
+    margin:0 auto;
+    background-color: rgba(0, 0, 0, .8);
+ }
+
+ #loader #loader-wrapper div {
+    text-align: center;
+    margin:0 auto;
+ }
