@@ -5,15 +5,7 @@
 	<section class="clear-15"></section>
 	<section class="threecol">
 		<nav id="forms-nav" class="page-menu">
-			<hgroup>
-				<h6>--- Welcome, <b><?php echo $this->identity->name; ?></b> ---</h6>
-			</hgroup>
-			<ul>
-				<li><a href="/admin">Site Stats</a></li>
-				<li><a href="/admin/products">Product Administration</a></li>
-				<li><a href="/admin/maintenance">Site Maintenance</a></li>
-				<li><a href="/admin/logout">Logout</a></li>
-			</ul>
+			<?php echo $this->partial('partials/_nav-admin.phtml', $this->identity); ?>
 		</nav>
 	</section>
 	<section class="ninecol last content-wrapper">
