@@ -5,7 +5,7 @@ class Admin_Model_Product extends Zend_Db_Table_Abstract
 	protected $_name = 'products';
 	public $id ='';
 
-	public function addProduct($name, $type, $price, $desc, $uri = NULL, $photo_name = NULL, $visible)
+	public function addProduct($name, $type, $price, $desc, $uri = NULL, $photo_name = NULL, $visible, $added_by = NULL)
 	{
 		$row = $this->createRow();
 	    $row->name = $name;
@@ -15,6 +15,7 @@ class Admin_Model_Product extends Zend_Db_Table_Abstract
 	    $row->photo_uri = $uri;
 	    $row->photo_name = $photo_name;
 	    $row->is_visible = $visible;
+	    $row->added_by = $added_by;
 	    $row->save();
 
 	    $this->id = $row->id;

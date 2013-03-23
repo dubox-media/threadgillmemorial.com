@@ -33,6 +33,14 @@ class Admin_ProductsController extends Zend_Controller_Action
 	{
 		$this->_helper->layout->disableLayout();
 
+		$auth = Zend_Auth::getInstance();
+
+		$identity = NULL;
+
+		if($auth->hasIdentity()){
+    	$identity = $auth->getIdentity();
+    }
+
 		$product_model = new Admin_Model_Product();
 
 		$res = array();
@@ -64,7 +72,8 @@ class Admin_ProductsController extends Zend_Controller_Action
 			$res['product_desc'],
 			$rel_file_path,
 			$file_name,
-			$res['product_visibility']
+			$res['product_visibility'],
+			$identity->name
 		);
 
 		return json_encode($res);
