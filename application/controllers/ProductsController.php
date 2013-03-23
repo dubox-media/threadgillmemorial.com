@@ -9,7 +9,10 @@ class ProductsController extends Zend_Controller_Action
 
 	public function indexAction()
 	{
-		
+		$product_model = new Admin_Model_Product();
+		$currProducts = $product_model->getProducts();
+    $currProductsArray = $currProducts->toArray();
+    $this->view->products = $currProductsArray;
 	}
 
 	public function casketsAction()

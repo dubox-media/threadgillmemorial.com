@@ -1,0 +1,22 @@
+<?php if($this->is_visible == 'true'): ?>
+<section class="product-listing twelvecol last">
+	<figure class="product-image threecol">
+		<img src="<?php echo $this->photo_uri; ?>" alt="product image">
+	</figure>
+	<section class="product-desc ninecol last">
+		<header class="twelvecol last">
+			<hgroup class="ninecol">
+				<h5 class="product-title">
+					<?php echo $this->name; ?>
+				</h5>
+			</hgroup>
+			<hgroup class="threecol last">
+				<h6 class="product-price"><?php echo $this->price; ?></h6>
+			</hgroup>
+		</header>
+		<article class="product-details">
+			<p><?php echo $this->description; ?></p>
+		</article>
+	</section>
+</section>
+<?php endif; ?>
