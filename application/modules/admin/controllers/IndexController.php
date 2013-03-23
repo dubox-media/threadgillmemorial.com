@@ -31,7 +31,7 @@ class Admin_IndexController extends Zend_Controller_Action
 				$db = Zend_Db_Table::getDefaultAdapter();
 				$authAdapter = new Zend_Auth_Adapter_DbTable($db, 'users', 'name', 'password');
 				$authAdapter->setIdentity($data['name']);
-				$authAdapter->setCredential($data['password']);
+				$authAdapter->setCredential(md5($data['password']));
 
 				// Authenticate
 				$result = $authAdapter->authenticate();
