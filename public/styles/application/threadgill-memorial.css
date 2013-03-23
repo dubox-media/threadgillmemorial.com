@@ -389,8 +389,44 @@ fieldset ul.form-row {
     margin: 8px 0;
 }
 
-fieldset>fieldset {
+form>ul li {
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+}
 
+form>ul li ul li ul {
+    width: auto;
+    display: inline-block;
+}
+
+form>ul li ul li,
+form>ul li ul li ul li {
+    display: inline-block;
+}
+
+form>ul li ul li {
+    margin: 0 8px;
+}
+
+form>ul li ul li:first-child {
+    margin: 0 5px 0 0;
+}
+
+form>ul li ul li:last-child {
+    margin: 0 0 0 5px;
+}
+
+input, select, textarea {
+    width:100%;
+}
+
+select {
+    padding: 3px;
+}
+
+.flush {
+    margin:0 !important;
 }
 
 form .form-row.center-row li {
