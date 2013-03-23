@@ -15,11 +15,23 @@
 	margin:0;
 	display: table;
 	height: 34px;
-	border: 1px ridge #fff;
 }
 
 #edit-items-form .product-edit-row>header.to-delete {
-	border: 1px ridge red;
+	border: 1px ridge red !important;
+}
+
+#edit-items-form .product-edit-row>header.open {
+	border-top: 1px ridge #b57b10;
+	border-right: 1px ridge #b57b10;
+	border-left: 1px ridge #b57b10;
+}
+
+#edit-items-form .product-edit-row>header.closed {
+	border-top: 1px ridge #b57b10;
+	border-right: 1px ridge #b57b10;
+	border-left: 1px ridge #b57b10;
+	border-bottom: 1px ridge #b57b10;;
 }
 
 .product-edit-row>header hgroup {
