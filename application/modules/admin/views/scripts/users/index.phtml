@@ -1,0 +1,66 @@
+<section id="admin-content" class="page-content">
+	<header>
+		<h1>Threadgill Memorial Administration</h1>
+	</header>
+	<section class="clear-15"></section>
+	<section class="threecol">
+		<nav id="forms-nav" class="page-menu">
+			<?php echo $this->partial('partials/_nav-admin.phtml', $this->identity); ?>
+		</nav>
+	</section>
+	<section id="form-wrapper" class="ninecol last">
+		<header>
+			<hgroup>
+				<h5>Actions</h5>
+			</hgroup>
+		</header>
+		<section class="sub-content-wrapper twelvecol last">
+			<form id="add-user-form" action="/admin/users/add" method="POST" enctype="multipart/form-data">
+				<fieldset class="add-users">
+					<header>
+						<h6>Add a User:</h6>
+					</header>
+					<section class="twelvecol user-row last">
+						<section class="onecol"></section>
+						<section class="elevencol last">
+							<header class="twelvecol last">
+								<h6 class="eightcol">User Row: </h6>
+							</header>
+							<!-- First Row -->
+							<ul class="form-row twelvecol last">
+								<li class="threecol lbl"><label for="user-name">User Name (login name): </label></li>
+								<li class="fourcol"><input type="text" name="user-name" autocomplete="off"></li>
+							</ul>
+							<ul class="form-row twelvecol last">
+								<li class="threecol lbl"><label for="user-password">Password: </label></li>
+								<li class="fourcol"><input type="password" name="user-password" autocomplete="off"></li>
+							</ul>
+							<ul class="form-row twelvecol last">
+								<li class="threecol lbl"><label for="user-type">User type: </label></li>
+								<li class="fourcol">
+									<select name="user-type">
+										<option value="admin">Administrator</option>
+										<option value="normal">Normal</option>
+									</select>
+								</li>
+							</ul>
+						</section>
+					</section>
+				</fieldset>
+				<span class="submit users-submit">Add User</span> 
+			</form>
+			<form id="edit-users-form" action="/admin/users/edit" method="POST">
+				<fieldset>
+					<header>
+						<h6>Edit Users:</h6>
+					</header>
+					<section class="twelvecol last user-row-wrapper">
+						<?php echo $this->partialLoop('partials/_users.phtml', $this->users); ?>
+					</section>
+				</fieldset>
+				<span class="submit users-edit-submit">Submit Changes</span> 
+			</form>
+		</section>
+	</section>
+	<section class="clear-15"></section>
+</section>

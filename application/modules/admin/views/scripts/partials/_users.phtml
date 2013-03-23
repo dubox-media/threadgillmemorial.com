@@ -1,0 +1,54 @@
+<section class="twelvecol user-edit-row accordion">
+	<header class="twelvecol accordion-header closed">
+		<hgroup>
+			<h2 class=""><?php echo $this->name; ?></h2>
+			<ul>
+				<li>Delete? </li>
+				<li><input type="checkbox" name="user-edit-delete"></li>
+			</ul>
+			<span class="icon icon-plus"></span>
+		</hgroup>
+	</header>
+<!-- 	<section class="clear-1"></section> -->
+<section class="accordion-content twelvecol">
+	<ul class="twelvecol">
+		<li><input type="hidden" name="row-id" value="<?php echo $this->id; ?>"></li>
+		<!-- Name -->
+		<li class="twelvecol">
+			<ul>
+				<li class="threecol">Name:</li>
+				<li class="sixcol"><input type="text" name="user-name" value="<?php echo $this->name; ?>" autocomplete="off"></li>
+			</ul>
+		</li>
+	</ul>
+	<ul class="twelvecol">
+		<!-- Password -->
+		<li class="">
+			<ul>
+				<li class="threecol">Password:</li>
+				<li class="sixcol"><input type="password" placeholder="type new password here" name="user-password" value="" autocomplete="off"></li>
+			</ul>
+		</li>
+	</ul>
+	<!-- type -->
+	<ul>
+		<li class="twelvecol">
+			<ul>
+				<li class="threecol">Type:</li>
+				<li class="fourcol">
+					<select name="user-type">
+						<?php if($this->type == 'admin'): ?>
+						<option value="admin" selected>Administrator</option>
+						<option value="normal">Normal</option>
+						<?php else :  ?>
+						<option value="admin">Administrator</option>
+						<option value="normal" selected>Normal</option>
+						<?php endif; ?>
+					</select>
+				</li>
+			</ul>
+		</li>
+	</ul>
+<section class="clear-1"></section>
+</section>
+</section>
