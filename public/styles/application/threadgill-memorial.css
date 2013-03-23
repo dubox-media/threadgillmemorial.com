@@ -292,10 +292,12 @@ textarea {
     width:100%;
 }
 
-span.submit {
+.submit {
     padding:5px 9px;
     font-size: 12px;
     font-size: 1.2rem;
+    max-width:85px;
+    height:auto;
     border:2px ridge #b57b10;
     border-radius: 4px;
     text-align: center;
@@ -317,7 +319,7 @@ span.submit {
     );
 }
 
-span.submit:hover {
+.submit:hover {
     background-image: linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 0%, rgb(253,245,232) 79%);
     background-image: -o-linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 0%, rgb(253,245,232) 79%);
     background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 0%, rgb(253,245,232) 79%);
