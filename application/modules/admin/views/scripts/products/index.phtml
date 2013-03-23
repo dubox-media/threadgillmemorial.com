@@ -7,7 +7,7 @@
 	<section class="threecol">
 		<nav id="forms-nav" class="page-menu">
 			<hgroup>
-				<h6>--- Welcome, <b><? echo $this->identity->name; ?></b> ---</h6>
+				<h6>--- Welcome, <b><?php echo $this->identity->name; ?></b> ---</h6>
 			</hgroup>
 			<ul>
 				<li><a href="/admin">Site Stats</a></li>
@@ -24,6 +24,7 @@
 			</hgroup>
 		</header>
 		<section class="sub-content-wrapper twelvecol last">
+			<?php //echo $this->addForm; ?>
 			<form id="add-products-form" action="/admin/products/add" method="POST" enctype="multipart/form-data">
 				<!-- Decedent Information -->
 				<fieldset class="add-products">
@@ -80,7 +81,7 @@
 					<header>
 						<h6>Edit Products:</h6>
 					</header>
-					<section class="twelvecol last">
+					<section class="twelvecol last product-row-wrapper">
 						<?php echo $this->partialLoop('partials/_products.phtml', $this->products); ?>
 					</section>
 				</fieldset>

@@ -1,27 +1,30 @@
-<section class="elevencol product-edit-row accordion">
-	<header class="open">
+<section class="twelvecol product-edit-row accordion">
+	<header class="twelvecol accordion-header closed">
 		<hgroup>
 			<h2 class=""><?php echo $this->name; ?></h2>
 			<ul>
 				<li>Delete? </li>
 				<li><input type="checkbox" name="product-edit-delete"></li>
 			</ul>
-			<?php if($this->id == 1): ?>
-			<span class="icon icon-minus"></span>
-			<?php else : ?>
 			<span class="icon icon-plus"></span>
-			<?php endif; ?>
 		</hgroup>
 	</header>
-	<section class="clear-1"></section>
-<section class="accordion-content">
+<!-- 	<section class="clear-1"></section> -->
+<section class="accordion-content twelvecol">
 	<ul class="twelvecol">
-	<li><input type="hidden" value="<?php echo $this->id; ?>"></li>
+	<li><input type="hidden" name="row-id" value="<?php echo $this->id; ?>"></li>
+	<!-- Name -->
+	<li class="twelvecol">
+		<ul>
+			<li class="twelvecol">Name:</li>
+			<li class="eightcol"><input type="text" name="product-name" value="<?php echo $this->name; ?>"></li>
+		</ul>
+	</li>
 	<!-- price -->
 	<li class="twocol">
 		<ul>
 			<li>Price:</li>
-			<li><input type="text" name="product-edit-price" value="<?php echo $this->price; ?>"></li>
+			<li><input type="text" name="product-price" value="<?php echo $this->price; ?>"></li>
 		</ul>
 	</li>
 	<!-- type -->
@@ -29,7 +32,7 @@
 		<ul>
 			<li>Type:</li>
 			<li>
-				<select name="product-edit-type">
+				<select name="product-type">
 					<?php if($this->type == 'urns'): ?>
 					<option value="urns" selected>Urn</option>
 					<option value="caskets">Casket</option>
@@ -44,11 +47,12 @@
 	<!-- isVisible -->
 	<li class="onecol">
 		<ul>
+			<li><?php echo $this->is_visible; ?></li>
 			<li>Visible:</li>
-			<?php if($this->is_visible == 1): ?>
-			<li><input type="checkbox" name="product-edit-visibility" checked="true"></li>
-			<?php else : ?>
-			<li><input type="checkbox" name="product-edit-visibility"></li>
+			<?php if($this->is_visible == 'true'): ?>
+			<li><input type="checkbox" name="product-visibility" checked></li>
+			<?php else: ?>
+			<li><input type="checkbox" name="product-visibility"></li>
 			<?php endif; ?>
 		</ul>
 	</li>
@@ -57,13 +61,13 @@
 		<ul>
 			<li>Photo:</li>
 			<li><input type="text" title="<?php echo $this->photo_name; ?>" value="<?php echo $this->photo_name; ?>" readonly></li>
-			<li><input type="file" name="product-edit-photo"></li>
+			<li><input type="file" name="product-photo"></li>
 		</ul>
 	</li>
 </ul>
 <ul class="twelvecol">
 	<li>Description</li>
-	<li class="elevencol"><textarea><?php echo $this->description; ?></textarea></li>
+	<li class="elevencol"><textarea name="product-desc"><?php echo $this->description; ?></textarea></li>
 </ul>
 <section class="clear-1"></section>
 </section>
