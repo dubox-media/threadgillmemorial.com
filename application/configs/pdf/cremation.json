@@ -1,100 +1,120 @@
 {
 	"page_0": {
-		"name": {
+		"dec_name": {
 			"x": 156,
 			"y": 619
 		},
 		"gender": {
-			"x": 500,
-			"y": 620
-		},
-		"Female": {
-			"x": 522,
-			"y": 620
+			"x": 502,
+			"y": 619
 		},
 		"dob": {
-			"x": 130,
-			"y": 595
+			"x": 118,
+			"y": 596
 		},
 		"dod": {
-			"x": 324,
-			"y": 595
+			"x": 330,
+			"y": 596
 		},
 		"ssn": {
-			"x": 439,
-			"y": 595
-		},
-		"container": {
-			"x": 200,
-			"y": 490
+			"x": 448,
+			"y": 596
 		},
 		"tray": {
-			"x": 294,
-			"y": 490
+			"x": 196,
+			"y": 483
 		},
-		"container_other": {
-			"x": 369,
-			"y": 492
+		"container_other_box": {
+			"x": 296,
+			"y": 483
+		},
+		"container_other_field": {
+			"x": 378,
+			"y": 483
+		},
+		"cremated_remains_temp": {
+			"x": 265,
+			"y": 465
+		},
+		"cremated_remains_other_box": {
+			"x": 380,
+			"y": 465
+		},
+		"cremated_remains_other_field": {
+			"x": 429,
+			"y": 465
 		},
 		"creamated_remains_ship_initials": {
-			"x": 42,
-			"y": 210
+			"x": 32,
+			"y": 183
 		},
 		"creamated_remains_ship_name": {
-			"x": 242,
-			"y": 212
+			"x": 239,
+			"y": 183
 		},
 		"creamated_remains_ship_address": {
-			"x": 156,
-			"y": 200
+			"x": 148,
+			"y": 172
 		},
 		"creamated_remains_called_for_by_initials": {
-			"x": 42,
-			"y": 179
+			"x": 32,
+			"y": 150
 		},
 		"creamated_remains_called_for_by_name": {
 			"x": 249,
-			"y": 180
+			"y": 150
 		},
 		"signature": {
-			"x": 182,
-			"y": 128
+			"x": 179,
+			"y": 191
 		},
 		"date": {
-			"x": 380,
-			"y": 128
+			"x": 385,
+			"y": 91
 		},
 		"time": {
-			"x": 472,
-			"y": 128
+			"x": 484,
+			"y": 91
 		},
 		"print_name": {
-			"x": 186,
-			"y": 105
+			"x": 179,
+			"y": 68
 		},
 		"relationship": {
-			"x": 414,
-			"y": 105
+			"x": 423,
+			"y": 68
 		},
 		"rel_address": {
-			"x": 175,
-			"y": 85
+			"x": 168,
+			"y": 48
 		},
-		"telephone_nbr": {
-			"x": 437,
-			"y": 85
+		"rel_telephone_nbr": {
+			"x": 448,
+			"y": 48
 		},
-		"witness": {
-			"x": 182,
-			"y": 54
+		"rel_city": {
+			"x": 151,
+			"y": 28
 		},
-		"witness_date": {
-			"x": 388,
-			"y": 54
+		"rel_state": {
+			"x": 394,
+			"y": 28
 		},
-		"witness_time": {
-			"x": 477,
-			"y": 54
+		"rel_zip": {
+			"x": 394,
+			"y": 28
+		},
+		"director_sig": {
+			"x": 172,
+			"y": 7
+		},
+		"director_date": {
+			"x": 393,
+			"y": 7
+		},
+		"director_time": {
+			"x": 484,
+			"y": 7
 		}
 	},
 	"page_1" :{

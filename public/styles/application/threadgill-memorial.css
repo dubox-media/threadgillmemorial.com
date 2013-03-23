@@ -212,6 +212,14 @@ blockquote {
     cursor: pointer;
     background-color: white;
 }
+
+.info {
+    float: right;
+    width:20px;
+    height:20px;
+    cursor: pointer;
+}
+
 /*
  *--------------------------
  * Address 
@@ -237,6 +245,8 @@ input[type="phone"],
 input[type="number"],
 input[type="date"],
 select {
+    color:#999;
+    width:100%;
     height: auto;
     font-size: 15px;
     line-height: 15px;
@@ -245,13 +255,30 @@ select {
     outline: none;
 }
 
+input[type="date"] {
+    padding:2px 0 1px 4px;
+}
+
 input[type="checkbox"] {
     width: 22px;
     height:21px;
     border: 1px solid #e7e7e7;
     border-radius: 6px;
-    display:none;
+    /*display:none;*/
     /*background: url(/images/checkbox-unchecked.png);*/
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="phone"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border:1px solid #ccc;
+    background-color: #FDF5E8;
+    color:#333;
 }
 
 textarea {
@@ -260,7 +287,51 @@ textarea {
     font-size: 14px;
     font-size: 1.4rem;
     padding:5px;
+    min-height: 75px;
     outline: none;
+    width:100%;
+}
+
+span.submit {
+    padding:5px 9px;
+    font-size: 12px;
+    font-size: 1.2rem;
+    border:2px ridge #b57b10;
+    border-radius: 4px;
+    text-align: center;
+    cursor:pointer;
+
+    background-image: linear-gradient(bottom, rgb(253,245,232) 16%, rgb(255,255,255) 59%, rgb(255,255,255) 80%);
+    background-image: -o-linear-gradient(bottom, rgb(253,245,232) 16%, rgb(255,255,255) 59%, rgb(255,255,255) 80%);
+    background-image: -moz-linear-gradient(bottom, rgb(253,245,232) 16%, rgb(255,255,255) 59%, rgb(255,255,255) 80%);
+    background-image: -webkit-linear-gradient(bottom, rgb(253,245,232) 16%, rgb(255,255,255) 59%, rgb(255,255,255) 80%);
+    background-image: -ms-linear-gradient(bottom, rgb(253,245,232) 16%, rgb(255,255,255) 59%, rgb(255,255,255) 80%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.16, rgb(253,245,232)),
+        color-stop(0.59, rgb(255,255,255)),
+        color-stop(0.8, rgb(255,255,255))
+    );
+}
+
+span.submit:hover {
+    background-image: linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 0%, rgb(253,245,232) 79%);
+    background-image: -o-linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 0%, rgb(253,245,232) 79%);
+    background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 0%, rgb(253,245,232) 79%);
+    background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 0%, rgb(253,245,232) 79%);
+    background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 45%, rgb(255,255,255) 0%, rgb(253,245,232) 79%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.45, rgb(255,255,255)),
+        color-stop(0, rgb(255,255,255)),
+        color-stop(0.79, rgb(253,245,232))
+    );  
 }
 
 .unchecked {
@@ -288,50 +359,43 @@ textarea {
 }
 
 label {
-    color: #999;
+    color: #b57b10;
     font-size: 15px;
     text-align: left;
-    font-weight: 700;
+    padding:0;
 }
 
-form>ul li {
-    display: block;
+.lbl {
+   text-align: left; 
+}
+
+fieldset {
+    margin: 0 0 10px 0;
+}
+
+fieldset header {
+    margin: 15px 0;
+}
+
+fieldset ul li ul li {
     text-align: left;
-    margin: 10px 0;
 }
 
-form>ul li ul li ul {
-    width: auto;
-    display: inline-block;
+fieldset li.lbl {
+    padding:4px 0;
 }
 
-form>ul li ul li,
-form>ul li ul li ul li {
-    display: inline-block;
+fieldset ul.form-row {
+    margin: 8px 0;
 }
 
-form>ul li ul li {
-    margin: 0 8px;
+fieldset>fieldset {
+
 }
 
-form>ul li ul li:first-child {
-    margin: 0 5px 0 0;
-}
-
-form>ul li ul li:last-child {
-    margin: 0 0 0 5px;
-}
-
-input, select, textarea {
-    width:100%;
-}
-
-select {
-    padding: 3px;
-}
-
-.flush {
-    margin:0 !important;
+form .form-row.center-row li {
+    text-align: center;
+    margin: 0 auto;
 }
 
 .wrapper-100 {
@@ -378,6 +442,12 @@ select {
  *--------------------------
  */
 
+.clear-1 {
+    height:1px;
+    line-height: 1px;
+    width:100%;
+    clear:both;
+}
 .clear-15 {
     clear: both;
     min-height: 15px;
@@ -789,5 +859,41 @@ footer .accordion-content p {
     font-size: 1.4rem;
 }
 /**********************************************************************************************************************************************************
- 
+ LOADER
  *********************************************************************************************************************************************************/
+
+ #loader {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: none;
+ }
+
+ #loader>section {
+    width: 100%;
+    height: 100%;
+    display: table;
+ }
+
+ #loader>section>section {
+    width:100%;
+    text-align: center;
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+ }
+
+ #loader #loader-wrapper {
+    width:100%;
+    text-align: center;
+    padding:50px 0;
+    margin:0 auto;
+    background-color: rgba(0, 0, 0, .8);
+ }
+
+ #loader #loader-wrapper div {
+    text-align: center;
+    margin:0 auto;
+ }

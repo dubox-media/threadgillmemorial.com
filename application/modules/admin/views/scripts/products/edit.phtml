@@ -1,0 +1,12 @@
+<form id="edit-items-form" action="/admin/products/edit" method="POST">
+	<!-- Decedent Information -->
+	<fieldset>
+		<header>
+			<h6>Edit Products:</h6>
+		</header>
+		<section class="twelvecol last">
+			<?php echo $this->partialLoop('partials/_products.phtml', $this->products); ?>
+		</section>
+	</fieldset>
+	<span class="submit products-edit-submit">Submit Changes</span> 
+</form>
