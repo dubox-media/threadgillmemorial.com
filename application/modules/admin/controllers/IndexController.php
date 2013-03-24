@@ -37,7 +37,7 @@ class Admin_IndexController extends Zend_Controller_Action
 				$result = $authAdapter->authenticate();
 				if($result->isValid()) {
 					$storage = $auth->getStorage();
-					$storage->write($authAdapter->getResultRowObject(array('name')));
+					$storage->write($authAdapter->getResultRowObject(array('name', 'role', 'id')));
 					$this->_redirect('/admin');
 					// $user = $auth->getStorage()->read();
 				} else {
