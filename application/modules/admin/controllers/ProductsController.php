@@ -52,6 +52,8 @@ class Admin_ProductsController extends Zend_Controller_Action
 			$res[$key] = $value;
 		}
 
+		$tags = serialize($res['product_tags']);
+
 		if(isset($_FILES) && array_key_exists('product_photo', $_FILES)) {
 
 			$baseDir = APPLICATION_PATH . '/../public/images/' . $res['product_type'];
@@ -73,7 +75,8 @@ class Admin_ProductsController extends Zend_Controller_Action
 			$rel_file_path,
 			$file_name,
 			$res['product_visibility'],
-			$identity->name
+			$identity->name,
+			$tags
 		);
 
 		return json_encode($res);
@@ -94,6 +97,8 @@ class Admin_ProductsController extends Zend_Controller_Action
 		foreach ($_POST as $key => $value) {
 			$res[$key] = $value;
 		}
+
+		$tags = serialize($res['product_tags']);
 
 		if(isset($_FILES) && array_key_exists('product_photo', $_FILES)) {
 
@@ -116,7 +121,8 @@ class Admin_ProductsController extends Zend_Controller_Action
 			$res['product_desc'],
 			$rel_file_path,
 			$file_name,
-			$res['product_visibility']
+			$res['product_visibility'],
+			$tags
 		);
 
 		return json_encode($edit);

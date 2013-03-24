@@ -54,6 +54,7 @@ $(function() {
 			formdata.append('product_type', $(self).children().find('select[name=product-type]').val());
 			formdata.append('product_price', $(self).children().find('input[name=product-price]').val());
 			formdata.append('product_visibility', $(self).children().find('input[name=product-visibility]').is(':checked'));
+			formdata.append('product_tags', $(self).children().find('input[name=product-tags]').val());
 			formdata.append('product_desc', $(self).children().find('textarea[name=product-desc]').val());
 			formdata.append('product_photo', file.files[0]);
 
@@ -128,6 +129,7 @@ $(function() {
 					formdata.append('product_price', $(self).children().find('input[name=product-price]').val());
 					formdata.append('product_visibility', $(self).children().find('input[name=product-visibility]').is(':checked'));
 					formdata.append('product_desc', $(self).children().find('textarea[name=product-desc]').val());
+					formdata.append('product_tags', $(self).children().find('input[name=product-tags]').val());
 					formdata.append('product_photo', file.files[0]);
 
 					$.ajax({

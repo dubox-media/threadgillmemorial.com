@@ -57,7 +57,12 @@
 								<li class="threecol lbl"><label for="product-photo">Product Photo: </label></li>
 								<li class="threecol"><input type="file" name="product-photo"></li>
 							</ul>
-							<!-- Third Row -->
+							<!-- Fourth -->
+							<ul class="form-row twelvecol last">
+								<li class="threecol lbl"><label for="product-tags">Product Tags: </label></li>
+								<li class="eightcol"><input type="text" name="product-tags" placeholder="use a comma separated list like: (white, metal, less-expensive, etc)"></li>
+							</ul>
+							<!-- Fifth Row -->
 							<ul class="form-row twelvecol last">
 								<li class="threecol lbl"><label for="product-desc">Product Description: </label></li>
 								<li class="eightcol last"><textarea type="file" name="product-desc"></textarea></li>
@@ -68,7 +73,6 @@
 				<span class="submit products-submit">Add Product(s)</span> 
 			</form>
 			<form id="edit-items-form" action="/admin/products/edit" method="POST">
-				<!-- Decedent Information -->
 				<fieldset>
 					<header>
 						<h6>Edit Products:</h6>

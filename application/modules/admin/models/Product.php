@@ -5,7 +5,7 @@ class Admin_Model_Product extends Zend_Db_Table_Abstract
 	protected $_name = 'products';
 	public $id ='';
 
-	public function addProduct($name, $type, $price, $desc, $uri = NULL, $photo_name = NULL, $visible, $added_by = NULL)
+	public function addProduct($name, $type, $price, $desc, $uri = NULL, $photo_name = NULL, $visible, $added_by = NULL, $tags=NULL)
 	{
 		$row = $this->createRow();
 	    $row->name = $name;
@@ -16,13 +16,14 @@ class Admin_Model_Product extends Zend_Db_Table_Abstract
 	    $row->photo_name = $photo_name;
 	    $row->is_visible = $visible;
 	    $row->added_by = $added_by;
+	    $row->tags = $tags;
 	    $row->save();
 
 	    $this->id = $row->id;
 	    return $row->id;
 	}
 
-	public function editProduct($id, $name, $type, $price, $desc, $uri, $photo_name, $visible)
+	public function editProduct($id, $name, $type, $price, $desc, $uri, $photo_name, $visible, $tags=NULL)
 	{
 		$row = $this->find($id)->current();
 
@@ -31,13 +32,23 @@ class Admin_Model_Product extends Zend_Db_Table_Abstract
 		    $row->type = $type;
 		    $row->price = $price;
 		    $row->description = $desc;
+
 		    if($uri != NULL) {
 		    	$row->photo_uri = $uri;
 		    }
+
 		    if($photo_name != NULL) {
 		    	$row->photo_name = $photo_name;
 		    }
+
 		    $row->is_visible = $visible;
+
+		    if($tags == NULL) {
+		    	$row->tags = '';
+		    } else {
+		    	$row->tags = $tags;
+		    }
+
 		    $row->save();
 
 		    $this->id = $row->id;

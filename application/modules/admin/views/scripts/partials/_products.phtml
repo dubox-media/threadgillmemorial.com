@@ -65,6 +65,10 @@
 		</ul>
 	</li>
 </ul>
+<ul class="form-row twelvecol last">
+	<li class="threecol lbl"><label for="product-tags">Product Tags: </label></li> 
+	<li class="eightcol"><input type="text" name="product-tags" placeholder="use a comma separated list like: (white, metal, less-expensive, etc)" value="<?php echo unserialize($this->tags); ?>"></li>
+</ul>
 <ul class="twelvecol">
 	<li>Description</li>
 	<li class="elevencol"><textarea name="product-desc"><?php echo $this->description; ?></textarea></li>
