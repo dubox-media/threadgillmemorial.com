@@ -1,6 +1,6 @@
 <section id="admin-content" class="page-content">
 	<header>
-		<h1>Threadgill Memorial Administration</h1>
+		<h1>Users Administration</h1>
 	</header>
 	<section class="clear-15"></section>
 	<section class="threecol">
@@ -15,6 +15,7 @@
 			</hgroup>
 		</header>
 		<section class="sub-content-wrapper twelvecol last">
+			<?php if($this->identity->role == 'admin'): ?>
 			<form id="add-user-form" action="/admin/users/add" method="POST" enctype="multipart/form-data">
 				<fieldset class="add-users">
 					<header>
@@ -49,6 +50,7 @@
 				</fieldset>
 				<span class="submit users-submit">Add User</span> 
 			</form>
+			<?php endif; ?>
 			<form id="edit-users-form" action="/admin/users/edit" method="POST">
 				<fieldset>
 					<header>

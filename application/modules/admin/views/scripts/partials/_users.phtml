@@ -37,12 +37,16 @@
 				<li class="threecol">Type:</li>
 				<li class="fourcol">
 					<select name="user-type">
-						<?php if($this->type == 'admin'): ?>
+						<?php if($this->role == 'admin'): ?>
 						<option value="admin" selected>Administrator</option>
 						<option value="normal">Normal</option>
 						<?php else :  ?>
+						<?php if($this->limit): ?>
+						<option value="normal" selected>Normal</option>
+						<?php else : ?>
 						<option value="admin">Administrator</option>
 						<option value="normal" selected>Normal</option>
+						<?php endif; ?>
 						<?php endif; ?>
 					</select>
 				</li>

@@ -18,14 +18,26 @@ class Admin_UsersController extends Zend_Controller_Action
 	public function indexAction()
 	{
 		$auth = Zend_Auth::getInstance();
+		$identity = '';
+		$currUsers = '';
+		$currUsersArray = array();
 
 		if($auth->hasIdentity()){
-    	$this->view->identity = $auth->getIdentity();
+    	$identity = $auth->getIdentity();
+    	$this->view->identity = $identity;
     }
 
     $user_model = new Admin_Model_User();
-		$currUsers = $user_model->getUsers();
-    $currUsersArray = $currUsers->toArray();
+
+    if($identity->role == 'admin') {
+    	$currUsers = $user_model->getUsers();
+    	$currUsersArray = $currUsers->toArray();
+    } else {
+    	$currUsers = $user_model->getUserById($identity->id);
+    	$currUsersArray = $currUsers->toArray();
+    	$currUsersArray[0]['limit'] = true;
+    }
+
     $this->view->users = $currUsersArray;
 	}
 

@@ -21,20 +21,20 @@ class Admin_Model_User extends Zend_Db_Table_Abstract
 		$row = $this->find($id)->current();
 		if($row) {
 
-			if($name !== NULL && $row->name !== $name) {
+			if($name != NULL && $row->name != $name) {
 				$row->name = $name;
 			}
 
-			if($pw !== NULL && $row->password !== md5($pw)) {
+			if($pw != NULL && $row->password != md5($pw)) {
 				$row->password = md5($pw);
 			}
 
-	    if($role !== NULL && $row->role !== $role) {
+	    if($role != NULL && $row->role != $role) {
 				$row->role = $role;
 			}
 	    $row->save();
 	    $this->id = $row->id;
-	    return $row->id;
+	    return $id;
 		}
 	}
 
@@ -44,6 +44,14 @@ class Admin_Model_User extends Zend_Db_Table_Abstract
 		if($row) {
 			$row->delete();
 		}
+	}
+
+	public function getUserById($id)
+	{
+		$query = $this->select()
+			->where('id = ?', $id);
+		$row = $this->fetchAll($query);
+		return $row;
 	}
 
 	public function getUsers() {
