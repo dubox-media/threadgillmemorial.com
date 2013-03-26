@@ -1,5 +1,19 @@
 <?php if($this->is_visible == 'true'): ?>
+<?php 
+	if($this->tags != NULL): 
+		$tags = '';
+		$unser = unserialize($this->tags);
+		$str = preg_split("/,\s*/", $unser);
+		foreach($str as $idx) {
+			$tags .= $idx . ' ';		
+		}
+
+		$tags = trim($tags);
+?>
+<section class="product-listing twelvecol last" data-type="<?php echo $this->type; ?>" data-tags="<?php echo $tags; ?>">
+<?php else : ?>
 <section class="product-listing twelvecol last">
+<?php endif; ?>
 	<figure class="product-image threecol">
 		<img src="<?php echo $this->photo_uri; ?>" alt="product image">
 	</figure>
