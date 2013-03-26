@@ -130,6 +130,10 @@ ul {
     width:100%;
 }
 
+nav>ul.filters ul.selected label {
+    color: #B57B10;
+}
+
 li {
     list-style-type: none;
     display: block;
@@ -260,8 +264,8 @@ input[type="date"] {
 }
 
 input[type="checkbox"] {
-    width: 22px;
-    height:21px;
+    width: 14px;
+    height:14px;
     border: 1px solid #e7e7e7;
     border-radius: 6px;
     /*display:none;*/
@@ -660,7 +664,7 @@ form .form-row.center-row li {
     text-align: center;
 }
 
-.page-menu ul li {
+.page-menu nav>ul:not(.filters)>li {
     width:170px;
     height: 32px;
     margin: 5px auto 5px auto;
@@ -669,10 +673,43 @@ form .form-row.center-row li {
     background-image: url('/images/form_nav_bg.png');
 }
 
+nav.page-menu>ul:not(.filters)>li {
+    width:170px;
+    height: 32px;
+    margin: 5px auto 5px auto;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-image: url('/images/form_nav_bg.png');
+}
+
+.page-menu nav>ul.filters li {
+    display: inline-block;
+    margin-bottom:5px;
+    width: auto;
+}
+
+.page-menu nav>ul.filters li ul {
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-menu nav>ul.filters label {
+    color: #272727;
+}
+
+.page-menu nav>ul.filters li ul li {
+    display: block;
+    /*width:25px;*/
+    height:auto;
+    text-align: center;
+    font-size: 12px;
+}
+
 .page-menu a {
     font-family: "Arial";
-    font-size: 10px;
-    font-size: 1.0rem;
+    font-size: 12px;
+    font-size: 1.2rem;
     text-align: left;
     position: relative;
     top: 10px;
@@ -708,6 +745,13 @@ form .form-row.center-row li {
     height: 400px;
     overflow-y: scroll;
     overflow-x: hidden;
+}
+
+h3.no-match {
+    display: none;
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin: 35px auto;
 }
 /**********************************************************************************************************************************************************
 * CONTENT
