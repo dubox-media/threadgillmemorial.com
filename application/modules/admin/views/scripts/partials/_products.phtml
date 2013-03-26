@@ -14,54 +14,61 @@
 	<ul class="twelvecol">
 	<li><input type="hidden" name="row-id" value="<?php echo $this->id; ?>"></li>
 	<!-- Name -->
-	<li class="twelvecol">
+	<li class="tencol">
 		<ul>
 			<li class="twelvecol">Name:</li>
-			<li class="eightcol"><input type="text" name="product-name" value="<?php echo $this->name; ?>"></li>
-		</ul>
-	</li>
-	<!-- price -->
-	<li class="twocol">
-		<ul>
-			<li>Price:</li>
-			<li><input type="text" name="product-price" value="<?php echo $this->price; ?>"></li>
-		</ul>
-	</li>
-	<!-- type -->
-	<li class="twocol">
-		<ul>
-			<li>Type:</li>
-			<li>
-				<select name="product-type">
-					<?php if($this->type == 'urns'): ?>
-					<option value="urns" selected>Urn</option>
-					<option value="caskets">Casket</option>
-					<?php else :  ?>
-					<option value="caskets" selected>Casket</option>
-					<option value="urns">Urn</option>
-					<?php endif; ?>
-				</select>
-			</li>
-		</ul>
-	</li>
-	<!-- isVisible -->
-	<li class="onecol">
-		<ul>
-			<li><?php echo $this->is_visible; ?></li>
-			<li>Visible:</li>
-			<?php if($this->is_visible == 'true'): ?>
-			<li><input type="checkbox" name="product-visibility" checked></li>
-			<?php else: ?>
-			<li><input type="checkbox" name="product-visibility"></li>
-			<?php endif; ?>
+			<li class="twelvecol"><input type="text" name="product-name" value="<?php echo $this->name; ?>"></li>
 		</ul>
 	</li>
 	<!-- Photo -->
-	<li class="sixcol last">
+	<li class="fourcol">
 		<ul>
 			<li>Photo:</li>
-			<li><input type="text" title="<?php echo $this->photo_name; ?>" value="<?php echo $this->photo_name; ?>" readonly></li>
+			<li>
+				<figure class="product-image">
+					<img src="<?php echo $this->photo_uri; ?>" alt="<?php echo $this->photo_name; ?>" class="current-photo">
+				</figure>
+			</li>
 			<li><input type="file" name="product-photo"></li>
+		</ul>
+	</li>
+	<li class="sevencol last">
+		<ul>
+			<!-- price -->
+			<li>
+				<ul class="twelvecol">
+					<li>Price:</li>
+					<li><input type="text" name="product-price" value="<?php echo $this->price; ?>"></li>
+				</ul>
+			</li>
+			<!-- type -->
+			<li class="twelvecol">
+				<ul>
+					<li>Type:</li>
+					<li>
+						<select name="product-type">
+							<?php if($this->type == 'urns'): ?>
+							<option value="urns" selected>Urn</option>
+							<option value="caskets">Casket</option>
+							<?php else :  ?>
+							<option value="caskets" selected>Casket</option>
+							<option value="urns">Urn</option>
+							<?php endif; ?>
+						</select>
+					</li>
+				</ul>
+			</li>
+			<!-- isVisible -->
+			<li class="twocol">
+				<ul>
+					<li>Visible:</li>
+					<?php if($this->is_visible == 'true'): ?>
+					<li><input type="checkbox" name="product-visibility" checked></li>
+					<?php else: ?>
+					<li><input type="checkbox" name="product-visibility"></li>
+					<?php endif; ?>
+				</ul>
+			</li>
 		</ul>
 	</li>
 </ul>
