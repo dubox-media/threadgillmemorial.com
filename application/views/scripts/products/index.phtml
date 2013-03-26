@@ -4,18 +4,29 @@
 		<h1>Our Products</h1>
 	</header>
 	<section class="clear-15"></section>
-	<section class="onecol page-menu">
-		<!-- <nav id="products-nav" class="">
+	<section class="threecol page-menu">
+		<nav id="products-nav" class="">
 			<hgroup>
 				<h6>--- Please Select ---</h6>
 			</hgroup>
 			<ul>
-				<li><a href="/products/caskets">Caskets</a></li>
-				<li><a href="/products/urns">Urns</a></li>
+				<li><a href="#" name="caskets">Caskets</a></li>
+				<li><a href="#" name="urns">Urns</a></li>
 			</ul>
-		</nav> -->
+			<hgroup>
+				<h6>--- Filters ---</h6>
+			</hgroup>
+			<ul class="filters">
+				<li>
+					<ul>
+						<?php echo $this->partialLoop('partials/_product-filters.phtml', $this->tags); ?>
+					</ul>		
+				</li>
+				<div class="clear-1"></div>
+			</ul>
+		</nav>
 	</section>
-	<section class="elevencol last content-wrapper">
+	<section class="ninecol last content-wrapper">
 		<header>
 			<hgroup>
 				<h5>Featured caskets and urns</h5>
@@ -23,6 +34,7 @@
 		</header>
 		<section class="sub-content-wrapper">
 			<?php echo $this->partialLoop('partials/_products.phtml', $this->products); ?>
+			<h3 class="no-match">No products match those filters.</h3>
 		</section>
 	</section>
 	<section class="clear-15"></section>
