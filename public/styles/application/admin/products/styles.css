@@ -1,3 +1,11 @@
+#admin-products-content.page-content {
+	max-height: none;
+}
+
+#admin-products-content .sub-content-wrapper{
+	height:1200px;
+}
+
 .product-row .form-row {
 	padding: 0 5px;
 }
@@ -99,8 +107,8 @@
 	width: 17px;
 	height:15px;
 	position: relative;
-	top:-5px;
-	left:13px;
+	top:0;
+	left:16px;
 	box-shadow: 2px 2px 2px #333;
 	cursor: pointer;
 }
