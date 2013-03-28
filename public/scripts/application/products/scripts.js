@@ -99,7 +99,7 @@
 			});
 
 			// Type
-			$('nav a').live('click', function(e) {
+			$('nav#products-nav a').live('click', function(e) {
 				e.preventDefault();
 				self.filterTypes(this);
 			});
