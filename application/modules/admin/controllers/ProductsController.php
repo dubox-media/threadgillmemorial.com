@@ -33,8 +33,6 @@ class Admin_ProductsController extends Zend_Controller_Action
 
 	public function addAction()
 	{
-		set_time_limit(300);
-		ini_set('memory_limit', '20000M');
 
 		$this->_helper->layout->disableLayout();
 
@@ -75,13 +73,28 @@ class Admin_ProductsController extends Zend_Controller_Action
 		   new Zend_Image_Driver_Gd());
 		  $transform = new Zend_Image_Transform($image);
 
+		  /**
+		   * BLOCK FOR CLIENT UPLOADS
+		   */
 	    if(file_exists($file)) {
-	    	if($image->getWidth() > $this->thumb_size) {
+	    	if($image->getWidth() > $this->thumb_size && $image->getWidth() < '1200') {
 	    		$transform->fitToWidth($this->thumb_size)->save($base_dir . '/thumbs/'.$file_name);
 	    	} else {
-	    		$transform->save($base_dir . '/thumbs/'.$file_name);
+	    		// $transform->save($base_dir . '/thumbs/'.$file_name);
+	    		copy($rel_file_path, $base_dir . '/thumbs/'.$file_name);
 	    	}
 	    }
+
+	    /**
+	     * BLOCK FOR DEV UPLOADS
+	     */
+			// if(file_exists($file)) {
+	  //   	if($image->getWidth() > $this->thumb_size) {
+	  //   		$transform->fitToWidth($this->thumb_size)->save($base_dir . '/thumbs/'.$file_name);
+	  //   	} else {
+	  //   		$transform->save($base_dir . '/thumbs/'.$file_name);
+	  //   	}
+	  //   }
 		}
 
   	$add = $product_model->addProduct(
@@ -101,9 +114,6 @@ class Admin_ProductsController extends Zend_Controller_Action
 
 	public function editAction()
 	{
-
-		set_time_limit(300);
-		ini_set('memory_limit', '20000M');
 		
 		$this->_helper->layout->disableLayout();
 
@@ -136,13 +146,29 @@ class Admin_ProductsController extends Zend_Controller_Action
 		   new Zend_Image_Driver_Gd());
 		  $transform = new Zend_Image_Transform($image);
 
-			if(file_exists($file)) {
-	    	if($image->getWidth() > $this->thumb_size) {
+
+		  /**
+		   * BLOCK FOR CLIENT UPLOADS
+		   */
+	    if(file_exists($file)) {
+	    	if($image->getWidth() > $this->thumb_size && $image->getWidth() < '1200') {
 	    		$transform->fitToWidth($this->thumb_size)->save($base_dir . '/thumbs/'.$file_name);
 	    	} else {
-	    		$transform->save($base_dir . '/thumbs/'.$file_name);
+	    		// $transform->save($base_dir . '/thumbs/'.$file_name);
+	    		copy($rel_file_path, $base_dir . '/thumbs/'.$file_name);
 	    	}
 	    }
+
+	    /**
+	     * BLOCK FOR DEV UPLOADS
+	     */
+			// if(file_exists($file)) {
+	  //   	if($image->getWidth() > $this->thumb_size) {
+	  //   		$transform->fitToWidth($this->thumb_size)->save($base_dir . '/thumbs/'.$file_name);
+	  //   	} else {
+	  //   		$transform->save($base_dir . '/thumbs/'.$file_name);
+	  //   	}
+	  //   }
 		}
 
   	$edit = $product_model->editProduct(
