@@ -26,7 +26,7 @@
 			<li>Photo:</li>
 			<li>
 				<figure class="product-image">
-					<img src="<?php echo $this->photo_uri; ?>" alt="<?php echo $this->photo_name; ?>" class="current-photo">
+					<img src="<?php echo '/images/'.$this->type.'/thumbs/'.$this->photo_name; ?>" alt="<?php echo $this->photo_name; ?>" class="current-photo">
 				</figure>
 			</li>
 			<li><input type="file" name="product-photo"></li>
