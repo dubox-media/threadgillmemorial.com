@@ -81,7 +81,7 @@ class Admin_ProductsController extends Zend_Controller_Action
 	    		$transform->fitToWidth($this->thumb_size)->save($base_dir . '/thumbs/'.$file_name);
 	    	} else {
 	    		// $transform->save($base_dir . '/thumbs/'.$file_name);
-	    		copy($rel_file_path, $base_dir . '/thumbs/'.$file_name);
+	    		copy($file, $base_dir . '/thumbs/'.$file_name);
 	    	}
 	    }
 
