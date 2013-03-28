@@ -3,6 +3,7 @@
 class Admin_ProductsController extends Zend_Controller_Action
 {
 	public $thumb_size = '540';
+	public $max_width = '2800';
 
 	public function init()
 	{
@@ -77,7 +78,7 @@ class Admin_ProductsController extends Zend_Controller_Action
 		   * BLOCK FOR CLIENT UPLOADS
 		   */
 	    if(file_exists($file)) {
-	    	if($image->getWidth() > $this->thumb_size && $image->getWidth() < '1200') {
+	    	if($image->getWidth() > $this->thumb_size && $image->getWidth() < $this->max_width) {
 	    		$transform->fitToWidth($this->thumb_size)->save($base_dir . '/thumbs/'.$file_name);
 	    	} else {
 	    		// $transform->save($base_dir . '/thumbs/'.$file_name);
@@ -151,7 +152,7 @@ class Admin_ProductsController extends Zend_Controller_Action
 		   * BLOCK FOR CLIENT UPLOADS
 		   */
 	    if(file_exists($file)) {
-	    	if($image->getWidth() > $this->thumb_size && $image->getWidth() < '1200') {
+	    	if($image->getWidth() > $this->thumb_size && $image->getWidth() < $this->max_width) {
 	    		$transform->fitToWidth($this->thumb_size)->save($base_dir . '/thumbs/'.$file_name);
 	    	} else {
 	    		// $transform->save($base_dir . '/thumbs/'.$file_name);
