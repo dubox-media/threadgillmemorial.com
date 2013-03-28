@@ -33,6 +33,9 @@ class Admin_ProductsController extends Zend_Controller_Action
 
 	public function addAction()
 	{
+		set_time_limit(300);
+		ini_set('memory_limit', '20000M');
+
 		$this->_helper->layout->disableLayout();
 
 		$auth = Zend_Auth::getInstance();
@@ -99,6 +102,9 @@ class Admin_ProductsController extends Zend_Controller_Action
 	public function editAction()
 	{
 
+		set_time_limit(300);
+		ini_set('memory_limit', '20000M');
+		
 		$this->_helper->layout->disableLayout();
 
 		$product_model = new Admin_Model_Product();
