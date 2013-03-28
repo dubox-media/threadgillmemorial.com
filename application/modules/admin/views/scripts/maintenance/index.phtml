@@ -1,0 +1,23 @@
+<!-- Forms Presentation -->
+<section id="admin-products-content" class="page-content">
+	<header>
+		<h1>Site Maintenance</h1>
+	</header>
+	<section class="clear-15"></section>
+	<section class="threecol">
+		<nav id="forms-nav" class="page-menu">
+			<?php echo $this->partial('partials/_nav-admin.phtml', $this->identity); ?>
+		</nav>
+	</section>
+	<section id="form-wrapper" class="ninecol last">
+		<header>
+			<hgroup>
+				<h5>Actions:</h5>
+			</hgroup>
+		</header>
+		<section class="sub-content-wrapper twelvecol last">
+			<?php print_r(ini_get('memory_limit')); ?>			
+		</section>
+	</section>
+	<section class="clear-15"></section>
+</section>
