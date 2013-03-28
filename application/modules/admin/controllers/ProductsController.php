@@ -2,6 +2,8 @@
 
 class Admin_ProductsController extends Zend_Controller_Action
 {
+	public $thumb_size = '540';
+
 	public function init()
 	{
 		$auth = Zend_Auth::getInstance();
@@ -56,14 +58,26 @@ class Admin_ProductsController extends Zend_Controller_Action
 
 		if(isset($_FILES) && array_key_exists('product_photo', $_FILES)) {
 
-			$baseDir = APPLICATION_PATH . '/../public/images/' . $res['product_type'];
+			$base_dir = APPLICATION_PATH . '/../public/images/' . $res['product_type'];
 
-			$file = $baseDir .'/' . $_FILES['product_photo']['name'];
+			$file = $base_dir .'/' . $_FILES['product_photo']['name'];
 			$rel_file_path = '/images/'. $res['product_type'] . '/' . $_FILES['product_photo']['name'];
 			$file_name = $_FILES['product_photo']['name'];
 
-	    if(file_exists($file) == FALSE) {
+			if(file_exists($file) == FALSE) {
 	    	move_uploaded_file($_FILES['product_photo']['tmp_name'], $file);
+	    }
+
+			$image = new Zend_Image($file,
+		   new Zend_Image_Driver_Gd());
+		  $transform = new Zend_Image_Transform($image);
+
+	    if(file_exists($file)) {
+	    	if($image->getWidth() > $this->thumb_size) {
+	    		$transform->fitToWidth($this->thumb_size)->save($base_dir . '/thumbs/'.$file_name);
+	    	} else {
+	    		$transform->save($base_dir . '/thumbs/'.$file_name);
+	    	}
 	    }
 		}
 
@@ -102,14 +116,26 @@ class Admin_ProductsController extends Zend_Controller_Action
 
 		if(isset($_FILES) && array_key_exists('product_photo', $_FILES)) {
 
-			$baseDir = APPLICATION_PATH . '/../public/images/' . $res['product_type'];
+			$base_dir = APPLICATION_PATH . '/../public/images/' . $res['product_type'];
 
-			$file = $baseDir .'/' . $_FILES['product_photo']['name'];
+			$file = $base_dir .'/' . $_FILES['product_photo']['name'];
 			$rel_file_path = '/images/'. $res['product_type'] . '/' . $_FILES['product_photo']['name'];
 			$file_name = $_FILES['product_photo']['name'];
 
 	    if(file_exists($file) == FALSE) {
 	    	move_uploaded_file($_FILES['product_photo']['tmp_name'], $file);
+	    }
+
+			$image = new Zend_Image($file,
+		   new Zend_Image_Driver_Gd());
+		  $transform = new Zend_Image_Transform($image);
+
+			if(file_exists($file)) {
+	    	if($image->getWidth() > $this->thumb_size) {
+	    		$transform->fitToWidth($this->thumb_size)->save($base_dir . '/thumbs/'.$file_name);
+	    	} else {
+	    		$transform->save($base_dir . '/thumbs/'.$file_name);
+	    	}
 	    }
 		}
 
